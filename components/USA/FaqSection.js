@@ -13,7 +13,7 @@ export default function FAQsection() {
                     <div className="faq-section row">
                         <div className="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12">
                             <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters css-1n3tkec">
-                                <div className="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters css-1iji0d4" tabindex="0" role="button" aria-expanded="true">
+                                <div className="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters css-1iji0d4" tabIndex="0" role="button" aria-expanded="true">
                                     <div className="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters css-17o5nyn">
                                         <p>Is there a free trial available?</p>
                                     </div>
@@ -55,7 +55,7 @@ export default function FAQsection() {
                                 </div>
                             </div>
                             <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-1n3tkec">
-                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabindex="0" role="button" aria-expanded="false">
+                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabIndex="0" role="button" aria-expanded="false">
                                     <div className="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-17o5nyn">
                                         <p>What is your cancellation policy?</p>
                                     </div>
@@ -76,7 +76,7 @@ export default function FAQsection() {
                                 </div>
                             </div>
                             <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-1n3tkec">
-                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabindex="0" role="button" aria-expanded="false">
+                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabIndex="0" role="button" aria-expanded="false">
                                     <div className="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-17o5nyn">
                                         <p>Can other info be added to an invoice?</p>
                                     </div>
@@ -97,7 +97,7 @@ export default function FAQsection() {
                                 </div>
                             </div>
                             <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-1n3tkec">
-                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabindex="0" role="button" aria-expanded="false">
+                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabIndex="0" role="button" aria-expanded="false">
                                     <div className="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-17o5nyn">
                                         <p>How does billing work?</p>
                                     </div>
@@ -118,7 +118,7 @@ export default function FAQsection() {
                                 </div>
                             </div>
                             <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-1n3tkec">
-                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabindex="0" role="button" aria-expanded="false">
+                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabIndex="0" role="button" aria-expanded="false">
                                     <div className="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-17o5nyn">
                                         <p>How do I change my account email?</p>
                                     </div>
