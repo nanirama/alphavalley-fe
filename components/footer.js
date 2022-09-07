@@ -18,9 +18,9 @@ export default function Footer() {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                             <div className="description">
                                 <div className="logo">
-                                <Link href="/"><a><ImgLoader src={Logo} width={32} height={32} alt="Logo" /></a></Link>
+                                    <Link href="/"><a><ImgLoader src={Logo} width={32} height={32} alt="Logo" /></a></Link>
 
-                                <Link href="/"><a><h5 className='mb-0'>AlphaValley</h5></a></Link>
+                                    <Link href="/"><a><h5 className='mb-0'>AlphaValley</h5></a></Link>
                                 </div>
                                 <p>AlphaValley Advisors is a leading pitch deck consultant. We make early-stage startups ready for VC funding. We also offer investment research, equity research, and financial modelling services to boutique and institutional investment managers and PE/VC firms.</p>
                             </div>
@@ -29,12 +29,12 @@ export default function Footer() {
                             <div className="footer-box">
                                 <p className="title">Services</p>
                                 <div className="links">
-                                <Link href="/pitch-deck"><a>Investor Pitch Deck</a></Link>
-                                <Link href="/"><a>Financial Modelling</a></Link>
-                                <Link href="/"><a>Pitch Deck Design</a></Link>
-                                <Link href="/"><a>Business Plan <span>Coming soon!</span></a></Link>
-                                <Link href="/"><a>Business Valuation <span>Coming soon!</span></a></Link>
-                                <Link href="/"><a>Investor Connect <span>Coming soon!</span></a></Link>
+                                    <Link href="/pitch-deck"><a>Investor Pitch Deck</a></Link>
+                                    <Link href="/"><a>Financial Modelling</a></Link>
+                                    <Link href="/"><a>Pitch Deck Design</a></Link>
+                                    <Link href="/"><a>Business Plan <span>Coming soon!</span></a></Link>
+                                    <Link href="/"><a>Business Valuation <span>Coming soon!</span></a></Link>
+                                    <Link href="/"><a>Investor Connect <span>Coming soon!</span></a></Link>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ export default function Footer() {
                             <div className="footer-box">
                                 <p className="title">Resources</p>
                                 <div className="links">
-                                    <a href="/">About us</a>
+                                    <Link href="/about-us"><a>About us</a></Link>
                                     <Link href="/blog"><a>Blog</a></Link>
                                     <Link href="/"><a>Guides <span>Coming soon!</span></a></Link>
                                     <Link href="/case-studies"><a>Case Studies</a></Link>
@@ -72,16 +72,16 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="icons ">
-                            <a className='mx-2' href="/" target="_blank"rel="noopener noreferrer">
+                            <a className='mx-2' href="/" target="_blank" rel="noopener noreferrer">
                                 <ImgLoader src={Icon4} width={20} height={20} alt="twitter-icon" />
                             </a>
-                            <a className='mx-2' href="https://www.linkedin.com/company/alphavalleyco/" target="_blank"rel="noopener noreferrer">
+                            <a className='mx-2' href="https://www.linkedin.com/company/alphavalleyco/" target="_blank" rel="noopener noreferrer">
                                 <ImgLoader src={Icon5} width={20} height={20} alt="icon" />
                             </a>
-                            <a className='mx-2' href="https://www.facebook.com/alphavalley" target="_blank"rel="noopener noreferrer">
+                            <a className='mx-2' href="https://www.facebook.com/alphavalley" target="_blank" rel="noopener noreferrer">
                                 <ImgLoader src={Icon6} width={20} height={20} alt="icon" />
                             </a>
-                            <a className='mx-2' href="/" target="_blank"rel="noopener noreferrer">
+                            <a className='mx-2' href="/" target="_blank" rel="noopener noreferrer">
                                 <ImgLoader src={Icon7} width={20} height={20} alt="icon" />
                             </a>
                         </div>

@@ -34,9 +34,9 @@ export default function Herosection() {
                                 <ImgLoader src={AVlogo} width={32} height={32} alt="AVlogo" />
                                     <h6>Book Free Consultation</h6>
                                     <form>
-                                        <div className="form-group"><label for="name">Name *</label><input type="text" className="form-control" id="name" placeholder="Enter your name" />
+                                        <div className="form-group"><label htmlFor="name">Name *</label><input type="text" className="form-control" id="name" placeholder="Enter your name" />
                                         </div>
-                                        <div className="form-group"><label for="email">Email *</label>
+                                        <div className="form-group"><label htmlFor="email">Email *</label>
                                             <input type="email" className="form-control" id="email" placeholder="Enter your email" /></div>
                                         <div className="form-group"><button className="btn" type="submit">Book Now</button></div>
                                     </form>

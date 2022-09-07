@@ -107,7 +107,7 @@ export default function Header() {
                                        </div>
                                  </div>
                                  <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <a href="/">
+                                 <Link href="/"><a>
                                        <div className="sections">
                                           <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
@@ -115,7 +115,7 @@ export default function Header() {
                                              <p>Find retention drivers and make your customers smile.</p>
                                           </div>
                                        </div>
-                                    </a>
+                                    </a></Link>
                                  </div>
                                  <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                     <a href="/case-study/4">
@@ -129,7 +129,7 @@ export default function Header() {
                                     </a>
                                  </div>
                                  <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <a href="/term-condition">
+                                 <Link href="/term-condition"><a>
                                        <div className="sections">
                                           <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
@@ -138,9 +138,10 @@ export default function Header() {
                                           </div>
                                        </div>
                                     </a>
+                                 </Link>
                                  </div>
                                  <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <a href="/faq">
+                                 <Link href="/faq"><a>
                                        <div className="sections">
                                           <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
@@ -149,6 +150,7 @@ export default function Header() {
                                           </div>
                                        </div>
                                     </a>
+                                 </Link>
                                  </div>
                               </div>
                            </div>

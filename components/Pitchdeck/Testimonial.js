@@ -33,15 +33,15 @@ export default function TestimonialsectionPitch({data}) {
                     <Slider {...settings}>
                         {data && data.map((item, index)=>{
                             const { Content, ClientName, publishedAt } = item.attributes
-                            const TESTI_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/testimonies/${item.id}?populate=*`
-                            const { data: testiData, error } = useSWR(TESTI_ENDPOINT, fetcher);
-                            console.log('testiDatatestiData',testiData)
-                            const AuthImage = testiData?.data?.attributes?.ClientImage?.data?.attributes?.url ? testiData?.data?.attributes?.ClientImage?.data?.attributes?.url : DefaultImg
+                            //const TESTI_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/testimonies/${item.id}?populate=*`
+                            //const { data: testiData, error } = useSWR(TESTI_ENDPOINT, fetcher);
+                            //console.log('testiDatatestiData',testiData)
+                            //const AuthImage = testiData?.data?.attributes?.ClientImage?.data?.attributes?.url ? testiData?.data?.attributes?.ClientImage?.data?.attributes?.url : DefaultImg
                             return(
                                 <div className="testimonial" key={index}>
                                     <h3 className="mt-2 mb-5 text-center">{Content && Content}</h3>
                                     <div className="user-info">
-                                        <ImgLoader src={AuthImage} width={64} height={64} alt={ClientName && ClientName} className="rounded-circle" />
+                                        <ImgLoader src={DefaultImg} width={64} height={64} alt={ClientName && ClientName} className="rounded-circle" />
                                         <p className="name mt-3">{ClientName && ClientName}</p>
                                         <p className="designation">Published <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></p>
                                         <div className='d-flex justify-content-center align-items-center gap-1'>

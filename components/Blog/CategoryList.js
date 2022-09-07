@@ -8,7 +8,7 @@ export default function CategoryList({ categories, slug }) {
             <div className="web">
                 <Link href={`/blog/`}><a className={slug ? 'btn' : 'btn active'}>View All</a></Link>
                 {categories && categories.map((item, index) => (
-                    <Link href={`/blog/category/${item.attributes.slug}`}>
+                    <Link href={`/blog/category/${item.attributes.slug}`} key={index}>
                         <a  className={slug && slug=== item.attributes.slug ? 'btn active' : 'btn'}>{item.attributes.name}</a>
                     </Link>
                 ))}
@@ -17,7 +17,7 @@ export default function CategoryList({ categories, slug }) {
                 <select className="form-select" onChange={(e)=>router.push(e.target.value)}>
                     <option value="/blog">View All</option>
                     {categories && categories.map((item, index) => (
-                        <option value={`/blog/category/${item.attributes.slug}`}>{item.attributes.name}</option>
+                        <option key={index} value={`/blog/category/${item.attributes.slug}`}>{item.attributes.name}</option>
                     ))}
                 </select>
             </div>

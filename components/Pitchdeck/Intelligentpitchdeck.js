@@ -37,7 +37,7 @@ export default function Pitchdeckservicesection() {
                                                 </div>
                                             </div>
                                             <h5>Captivating Story</h5>
-                                            <p>We make sure that you don't look like another startup. An interesting story with relevant facts is what our investor decks inspire conviction with.</p>
+                                            <p>We make sure that you don&lsquo;t look like another startup. An interesting story with relevant facts is what our investor decks inspire conviction with.</p>
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-12">

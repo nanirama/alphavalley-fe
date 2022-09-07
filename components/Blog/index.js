@@ -136,7 +136,7 @@ const Index = ({data})=>{
                                 <div className="content m-0">
                                     <div className="tags">
                                         {categories && categories.data.map((item, index)=>(
-                                            <Link href={`/blog/category/${item.attributes.slug}`}><a><span className="tag">{item?.attributes?.name}</span></a></Link>
+                                            <Link key={index} href={`/blog/category/${item.attributes.slug}`}><a><span className="tag">{item?.attributes?.name}</span></a></Link>
                                         ))}
                                     </div>
                                     <h1>{title && title}</h1>
@@ -249,7 +249,7 @@ const Index = ({data})=>{
                                     <br />
                                     <div className="tag-box">
                                         {tags && tags.data && tags.data.map((item, index)=>(
-                                            <span>{item.attributes.name}</span>
+                                            <span key={index}>{item.attributes.name}</span>
                                         ))}                                        
                                     </div>
 
