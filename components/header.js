@@ -157,22 +157,22 @@ export default function Header() {
                         </div>
                      </div>
                      <div className="menu false">
-                        <div className="main-menu gap-2"><a>Verticals</a><ImgLoader src={Arrow} width={20} height={20} alt="arrow" /></div>
+                        <div className="main-menu gap-2"><Link href="/"><a>Verticals</a></Link><ImgLoader src={Arrow} width={20} height={20} alt="arrow" /></div>
                         <div className="sub-menu">
                            <div className="container"><span className="tags">Coming soon!</span></div>
                         </div>
                      </div>
                      <div className="menu false">
-                        <div className="main-menu gap-2"><a>Portfolio</a><ImgLoader src={Arrow} width={20} height={20} alt="arrow" /></div>
+                        <div className="main-menu gap-2"><Link href="/"><a>Portfolio</a></Link><ImgLoader src={Arrow} width={20} height={20} alt="arrow" /></div>
                         <div className="sub-menu">
                            <div className="container"><span className="tags">Coming soon!</span></div>
                         </div>
                      </div>
                      <div className="menu">
-                        <div className="main-menu"><a exact="true" href="/pricing">Pricing</a></div>
+                        <div className="main-menu"><Link href="/pricing"><a>Pricing</a></Link></div>
                      </div>
                   </div>
-                  <div className="header-button"><a href="/contact"><button>Contact us</button></a></div>
+                  <div className="header-button"><Link href="/contact"><a><button>Contact us</button></a></Link></div>
                </div>
 
 
