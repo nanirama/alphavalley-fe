@@ -11,7 +11,7 @@ import Worksection from "../components/Pitchdeck/WorkSection"
 import FAQsection from '../components/Elements/FaqSection'
 import { fetchAPI } from "../lib/api";
 export default function Pitchdeck({data}) {
-    const { MetaData, testimonies } = data.attributes
+    const { MetaData, testimonies, faqs } = data.attributes
     console.log('data.attributes',testimonies.data)
     return (
         <Layout>
@@ -27,7 +27,7 @@ export default function Pitchdeck({data}) {
                 <Alumnussection />
                 <TestimonialsectionPitch data={testimonies.data} />
                 <Worksection />
-                <FAQsection />
+                <FAQsection data={faqs.data} />
                 </div>
         </Layout>
     )
