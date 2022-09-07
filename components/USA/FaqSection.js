@@ -1,12 +1,8 @@
 import ImgLoader from '../Image'
 
 
-
-
 export default function FAQsection() {
-
     return (
-
         <div className="faq">
             <div className="container">
                 <div className="faq-top">
@@ -22,7 +18,8 @@ export default function FAQsection() {
                                         <p>Is there a free trial available?</p>
                                     </div>
                                     <div className="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1fx8m19">
-                                        <img src="==" alt="plus-icon" /></div>
+                                        {/* <img src="==" alt="plus-icon" /> */}
+                                    </div>
                                 </div>
                                 <div className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" style="min-height: 0px;">
                                     <div className="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
@@ -37,12 +34,13 @@ export default function FAQsection() {
                                 </div>
                             </div>
                             <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-1n3tkec">
-                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabindex="0" role="button" aria-expanded="false">
+                                <div className="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1iji0d4" tabIndex="0" role="button" aria-expanded="false">
                                     <div className="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-17o5nyn">
                                         <p>Can I change my plan later?</p>
                                     </div>
                                     <div className="MuiAccordionSummary-expandIconWrapper css-1fx8m19">
-                                        <img src="" alt="minus-icon" /></div>
+                                        {/* <img src="" alt="minus-icon" /> */}
+                                    </div>
                                 </div>
                                 <div className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-a0y2e3" style="min-height: 0px;">
                                     <div className="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
@@ -62,7 +60,8 @@ export default function FAQsection() {
                                         <p>What is your cancellation policy?</p>
                                     </div>
                                     <div className="MuiAccordionSummary-expandIconWrapper css-1fx8m19">
-                                        <img src="CC" alt="minus-icon" /></div>
+                                        {/* <img src="CC" alt="minus-icon" /> */}
+                                    </div>
                                 </div>
                                 <div className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-a0y2e3" style="min-height: 0px;">
                                     <div className="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
@@ -82,7 +81,8 @@ export default function FAQsection() {
                                         <p>Can other info be added to an invoice?</p>
                                     </div>
                                     <div className="MuiAccordionSummary-expandIconWrapper css-1fx8m19">
-                                        <img src="" alt="minus-icon" /></div>
+                                        {/* <img src="" alt="minus-icon" /> */}
+                                    </div>
                                 </div>
                                 <div className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-a0y2e3" style="min-height: 0px;">
                                     <div className="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
@@ -102,7 +102,8 @@ export default function FAQsection() {
                                         <p>How does billing work?</p>
                                     </div>
                                     <div className="MuiAccordionSummary-expandIconWrapper css-1fx8m19">
-                                        <img src="" alt="minus-icon" /></div>
+                                        {/* <img src="" alt="minus-icon" /> */}
+                                    </div>
                                 </div>
                                 <div className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-a0y2e3" style="min-height: 0px;">
                                     <div className="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
@@ -122,7 +123,8 @@ export default function FAQsection() {
                                         <p>How do I change my account email?</p>
                                     </div>
                                     <div className="MuiAccordionSummary-expandIconWrapper css-1fx8m19">
-                                        <img src="" alt="minus-icon" /></div>
+                                        {/* <img src="" alt="minus-icon" /> */}
+                                    </div>
                                 </div>
                                 <div className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-a0y2e3" style="min-height: 0px;">
                                     <div className="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
