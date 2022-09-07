@@ -7,7 +7,7 @@ import WhyAlphavalley from "../components/Pitchdeck/WhyAlphavalley"
 import CaseStudiessection from "../components/Elements/CaseStudies"
 import Alumnussection from "../components/Pricing/alumnussection"
 import TestimonialsectionPitch from "../components/Pitchdeck/Testimonial"
-import Worksection from "../components/pitchdeck/WorkSection"
+import Worksection from "../components/Pitchdeck/WorkSection"
 import FAQsection from '../components/Elements/FaqSection'
 import { fetchAPI } from "../lib/api";
 export default function Pitchdeck({data}) {
