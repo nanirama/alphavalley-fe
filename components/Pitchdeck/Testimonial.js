@@ -28,8 +28,8 @@ export default function TestimonialsectionPitch({data}) {
     
     return (
         <>
-            <div class="testimonial-section">
-                <div class="container">
+            <div className="testimonial-section">
+                <div className="container">
                     <Slider {...settings}>
                         {data && data.map((item, index)=>{
                             const { Content, ClientName, publishedAt } = item.attributes
@@ -38,12 +38,12 @@ export default function TestimonialsectionPitch({data}) {
                             console.log('testiDatatestiData',testiData)
                             const AuthImage = testiData?.data?.attributes?.ClientImage?.data?.attributes?.url ? testiData?.data?.attributes?.ClientImage?.data?.attributes?.url : DefaultImg
                             return(
-                                <div class="testimonial" key={index}>
+                                <div className="testimonial" key={index}>
                                     <h3 className="mt-2 mb-5 text-center">{Content && Content}</h3>
-                                    <div class="user-info">
+                                    <div className="user-info">
                                         <ImgLoader src={AuthImage} width={64} height={64} alt={ClientName && ClientName} className="rounded-circle" />
                                         <p className="name mt-3">{ClientName && ClientName}</p>
-                                        <p class="designation">Published <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></p>
+                                        <p className="designation">Published <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></p>
                                         <div className='d-flex justify-content-center align-items-center gap-1'>
                                             <svg  focusable="false" aria-hidden="true" width="24" height="24" fill="faaf00" viewBox="0 0 24 24" data-testid="StarIcon"><path fill="#faaf00" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                                             <svg  focusable="false" aria-hidden="true" width="24" height="24" fill="faaf00" viewBox="0 0 24 24" data-testid="StarIcon"><path fill="#faaf00" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>

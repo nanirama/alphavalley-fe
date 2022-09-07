@@ -6,16 +6,16 @@ export default function Herosection() {
 
     return (
 <>
-<div class="header-section">
-   <div class="container">
-      <div class="header-box">
-         <div class="content-box">
+<div className="header-section">
+   <div className="container">
+      <div className="header-box">
+         <div className="content-box">
             <h1>VC-Grade Pitch Decks for Visionary Startups</h1>
             <p>We create compelling, investor-ready pitch decks for startups.</p>
-            <button class="btn">Contact us</button>
+            <button className="btn">Contact us</button>
          </div>
-         <div class="image-box">
-         <ImgLoader src={PitchdeckImg} alt="Cards" class="banner-image"  />
+         <div className="image-box">
+         <ImgLoader src={PitchdeckImg} alt="Cards" className="banner-image"  />
             </div>
       </div>
    </div>

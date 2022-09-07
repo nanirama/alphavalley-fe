@@ -20,29 +20,29 @@ export default function BlogSinglePage() {
     return (
         <Layout>
 
-            <div class="blog-post">
-                <div class="container">
-                    <div class="heading">
-                        <div class="row">
-                            <div class="col-xl-7 col-lg-12 col-md-12">
-                                <div class="content">
-                                    <div class="tags">
-                                        <span class="tag">Design</span><span class="tag">Design</span>
+            <div className="blog-post">
+                <div className="container">
+                    <div className="heading">
+                        <div className="row">
+                            <div className="col-xl-7 col-lg-12 col-md-12">
+                                <div className="content">
+                                    <div className="tags">
+                                        <span className="tag">Design</span><span className="tag">Design</span>
                                     </div>
                                     <h1>How collaboration makes us better designers</h1>
                                     <p>Collaboration can make our teams stronger, and our individual designs better.</p>
-                                    <div class="user">
+                                    <div className="user">
                                         <ImgLoader src={Avatar} width={64} height={64} alt="author" />
                                         <img src="" />
-                                        <div class="content">
-                                            <p class="name">Natali Craig</p>
-                                            <p class="date">Published 14 Jan 2022</p>
+                                        <div className="content">
+                                            <p className="name">Natali Craig</p>
+                                            <p className="date">Published 14 Jan 2022</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="image">
+                        <div className="image">
                             <div className='blog-image'>
                                 <ImgLoader src={Blog1Hero} width={500} height={590} alt="blog" className="blog-image" />
                             </div>
@@ -52,18 +52,18 @@ export default function BlogSinglePage() {
                         </div>
                     </div>
 
-                    <div class="contents">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                <div class="left-box">
-                                    <div class="table-content">
+                    <div className="contents">
+                        <div className="row">
+                            <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                                <div className="left-box">
+                                    <div className="table-content">
                                         <span>Table of contents</span>
                                         <a href="#introduction">Introduction</a>
                                         <a href="#softwaretool">Software and tools</a>
                                         <a href="#resources">Other resources</a>
                                         <a href="#conclusion">Conclusion</a>
                                     </div>
-                                    <div class="sharing-button">
+                                    <div className="sharing-button">
                                         <button>
                                             <ImgLoader src={Linkedin} width={20} height={20} alt="Linkedin" />
 
@@ -84,8 +84,8 @@ export default function BlogSinglePage() {
                                 </div>
                             </div>
 
-                            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-                                <div class="right-box content-box">
+                            <div className="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                                <div className="right-box content-box">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.</p>
                                     <br />
                                     <hr />
@@ -94,7 +94,7 @@ export default function BlogSinglePage() {
                                     <p>Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id. </p>
                                     <p>Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.</p>
                                     <div className='blogimgg'><ImgLoader src={Blog2img} width={850} height={500} alt="blog" /></div>
-                                    <div class="quote-box">
+                                    <div className="quote-box">
                                         <h2>“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”</h2>
                                         <p>— Olivia Rhye, Product Designer</p>
                                     </div>
@@ -115,7 +115,7 @@ export default function BlogSinglePage() {
                                     <ImgLoader src={Blog3img} width={850} height={480} alt="blog" />
                                     <p>Lectus leo massa amet posuere. Malesuada mattis non convallis quisque. Libero sit et imperdiet bibendum quisque dictum vestibulum in non. Pretium ultricies tempor non est diam. Enim ut enim amet amet integer cursus. Sit ac commodo pretium sed etiam turpis suspendisse at.</p>
                                     <p>Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.</p>
-                                    <table class="table table-striped">
+                                    <table className="table table-striped">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
@@ -154,7 +154,7 @@ export default function BlogSinglePage() {
                                     <br />
                                     <hr />
                                     <br />
-                                    <div class="tag-box"><span>Design</span><span>Research</span></div>
+                                    <div className="tag-box"><span>Design</span><span>Research</span></div>
 
                                 </div>
                             </div>
