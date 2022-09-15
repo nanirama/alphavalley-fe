@@ -2816,7 +2816,7 @@ a.page-link {
 
 .home .case-study-section .case-study {
     max-width: 1410px;
-    position: absolute
+    position: absolute;
 }
 
 .home .case-study-section .heading h1 {
@@ -2842,7 +2842,8 @@ a.page-link {
 
 .home .case-study-section .tns-slider .card {
     background: #f4f5f7;
-    border: none
+    border: none;
+border:2px solid green;
 }
 
 .home .case-study-section .tns-slider .card>img {
@@ -4219,6 +4220,10 @@ a.page-link {
     margin-top: 30px;
 }
 
+.home-usa .case-study-section .card .tags span 
+{
+    margin-top: 0px !important;
+}
 .home-usa .case-study-section .card .heading {
     align-items: center;
     display: flex;
@@ -4246,8 +4251,7 @@ a.page-link {
     line-height: 20px;
     margin-bottom: 16px
 }
-
-.home-usa .case-study-section .card .tags span {
+.tags span {
     border-radius: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
@@ -4258,16 +4262,18 @@ a.page-link {
     font-weight: 400;
     line-height: 20px;
     margin-right: 10px;
-    padding: 2px 10px
+    padding: 2px 10px;
+    margin-bottom:6px !important;
 }
 
-.home-usa .case-study-section .card .tags span.tagsbg {
+.tags span.tagsbg {
     background: rgb(238, 244, 255);
     color: rgb(53, 56, 205);
+    
 
 }
 
-.home-usa .case-study-section .card .tags span.tagsbg2 {
+.tags span.tagsbg2 {
     background: rgb(253, 242, 250);
     color: rgb(193, 21, 116);
 
@@ -6395,3 +6401,784 @@ height: 60px;
     line-height: 24px;
     color: #667085;
   }
+
+
+  .pitch-deck {
+}
+.pitch-deck .header-section {
+  padding-top: 96px;
+}
+.pitch-deck .header-section .header-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pitch-deck .header-section .header-box .content-box {
+  width: 50%;
+}
+.pitch-deck .header-section .header-box .image-box {
+  width: 50%;
+}
+.pitch-deck .header-section .banner-image {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  border-top-left-radius: 25%;
+}
+.pitch-deck .header-section .content-box {
+  margin-right: 50px;
+}
+.pitch-deck .header-section .content-box h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.02em;
+  color: #101828;
+  margin-bottom: 24px;
+}
+.pitch-deck .header-section .content-box p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #667085;
+  margin-bottom: 48px;
+}
+.pitch-deck .header-section .content-box button {
+  padding: 10px 20px;
+  background: #444ce7;
+  border: 1px solid #444ce7;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  color: white;
+}
+.pitch-deck .home .other-service-section .image {
+  top: 300px;
+}
+.pitch-deck .home .other-service-section .image-content {
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+.pitch-deck .why-section {
+  padding: 96px 0;
+  background: #f2f4f7;
+}
+.pitch-deck .why-section h1 {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #101828;
+  margin-bottom: 20px;
+}
+.pitch-deck .why-section p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #667085;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.pitch-deck .why-section .content-section {
+  margin-top: 65px;
+}
+/* .pitch-deck .why-section .content-section .row{
+  margin-top: 45px;
+} */
+.pitch-deck .why-section .content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.pitch-deck .why-section .content-section .content-icons {
+  background: #eef4ff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pitch-deck .why-section .content-icons .inner-box {
+  background-color: #e0eaff;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pitch-deck .why-section .content-icons svg {
+  width: 24px;
+  height: 24px;
+}
+.pitch-deck .why-section .content h5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #101828;
+  margin-bottom: 8px;
+}
+.pitch-deck .why-section .content p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #667085;
+}
+.pitch-deck .stat-section {
+  padding: 96px 0;
+  background: #2d31a6;
+  color: white;
+}
+.pitch-deck .stat-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pitch-deck .stat-section .heading {
+  width: 768px;
+  margin-bottom: 45px;
+}
+.pitch-deck .stat-section .heading .title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #c7d7fe;
+}
+.pitch-deck .stat-section .heading h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.pitch-deck .stat-section .heading .s-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #c7d7fe;
+}
+.pitch-deck .stat-section .stat-item {
+  text-align: center;
+  align-items: center;
+}
+.pitch-deck .stat-section .stat-item .item {
+  margin: 15px 0;
+}
+.pitch-deck .stat-section .row {
+  align-items: center;
+}
+.pitch-deck .stat-section .stat-item h1,
+.pitch-deck .stat-section .stat-item h1 span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+.pitch-deck .stat-section .stat-item span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+}
+.pitch-deck .testimonial-section {
+  padding: 96px 0;
+  background: #2d31a6;
+  color: white;
+}
+.pitch-deck .testimonial-section .testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 94px;
+  margin-bottom: 50px;
+}
+.pitch-deck .testimonial-section .testimonial h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+.pitch-deck .testimonial-section .testimonial .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pitch-deck .testimonial-section .user-info img {
+  margin-bottom: 16px;
+}
+.pitch-deck .testimonial-section .user-info .name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+.pitch-deck .testimonial-section .user-info .designation {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #c7d7fe;
+  margin-bottom: 16px;
+}
+.pitch-deck .testimonial-section .slick-dots .slick-active {
+  color: white;
+  background-color: white;
+}
+.pitch-deck .testimonial-section .slick-dots button::before {
+  content: "";
+}
+.pitch-deck .testimonial-section .slick-dots li {
+  width: 15px;
+  background: #6172f3;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.pitch-deck .our-section {
+  padding: 96px 0;
+}
+.pitch-deck .our-section .heading {
+  text-align: center;
+}
+.pitch-deck .our-section .heading span {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #3538cd;
+}
+.pitch-deck .our-section .heading h1 {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #101828;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.pitch-deck .our-section .process-line {
+  padding: 45px 0;
+  display: flex;
+}
+.pitch-deck .our-section .process-line .image {
+  padding: 48px;
+  background: #f2f4f7;
+}
+.pitch-deck .our-section .process-line .image img {
+  width: 100%;
+  height: 100%;
+}
+.pitch-deck .our-section .content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+.pitch-deck .our-section .content-box h4 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  color: #101828;
+  margin-bottom: 16px;
+}
+.pitch-deck .our-section .content-box p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #667085;
+  margin-bottom: 26px;
+}
+.pitch-deck .our-section .heading p {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #667085;
+}
+.pitch-deck .our-section .key-points .key-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #667085;
+}
+.pitch-deck .our-section .content-box .content-icons {
+  background: #eef4ff;
+  width: 60px;
+  height: 60px;
+  /* padding: 8px; */
+  border-radius: 50%;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pitch-deck .our-section .content-box .content-icons .inner-box {
+  background-color: #e0eaff;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pitch-deck .our-section .content-box svg {
+  width: 24px;
+  height: 24px;
+}
+.pitch-deck-review .header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.pitch-deck-review .introduction {
+  background: #f2f4f7;
+}
+.pitch-deck-review .introduction .heading {
+  align-items: flex-start;
+}
+.pitch-deck-review .home .service-section .outer-box {
+  z-index: 999;
+  background-color: white;
+}
+.pitch-deck-review .home .service-section .outer-box .inner-box img {
+  border: 0;
+}
+.pitch-deck-review .home .service-section .contents .content h2 {
+  font-weight: 600;
+  color: black;
+  margin-bottom: 16px;
+}
+.pitch-deck-review .home .service-section .contents {
+  margin-top: 35px;
+}
+.pitch-deck .home.financial .other-service-section .image {
+  top: 430px;
+}
+
+@media (min-width: 0px) and (max-width: 575.98px) {
+  .pitch-deck .header-section .header-box {
+    flex-direction: column;
+  }
+  .pitch-deck .header-section .header-box .content-box {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+  .pitch-deck .header-section .header-box .image-box {
+    width: 100%;
+  }
+  .pitch-deck .header-section .banner-image {
+    height: 250px;
+  }
+  .pitch-deck .header-section .content-box h1 {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .pitch-deck .header-section .content-box p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
+  .pitch-deck .header-section .content-box button {
+    width: 100%;
+  }
+  .pitch-deck .home-in .faq .faq-bottom {
+    padding: 24px;
+  }
+  .pitch-deck .why-section h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 16px;
+  }
+  .pitch-deck .why-section p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .pitch-deck .why-section .content {
+    margin: 15px 0;
+  }
+  .pitch-deck .stat-section .heading {
+    width: 100%;
+  }
+  .pitch-deck .stat-section .row {
+    margin-bottom: 45px;
+  }
+  .pitch-deck .stat-section .heading h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .pitch-deck .stat-section .stat-item h1,
+  .pitch-deck .stat-section .stat-item h1 span {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .pitch-deck .stat-section .stat-item span {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .pitch-deck .our-section .content-box h4 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 14px;
+  }
+  .pitch-deck .our-section .content-box p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .pitch-deck .our-section .key-points .key-point {
+    padding: 6px 8px;
+  }
+  .pitch-deck .our-section .key-points .key-point span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .pitch-deck .our-section .heading h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 16px;
+  }
+  .pitch-deck .our-section .heading p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .pitch-deck .our-section .process-line .image {
+    margin-top: 30px;
+  }
+  .pitch-deck .our-section .process-line.reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .pitch-deck .header-section .header-box {
+    flex-direction: column;
+  }
+  .pitch-deck .header-section .header-box .content-box {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+  .pitch-deck .header-section .header-box .image-box {
+    width: 100%;
+  }
+  .pitch-deck .header-section .banner-image {
+    height: 350px;
+  }
+  .pitch-deck .header-section .content-box h1 {
+    font-size: 42px;
+    line-height: 54px;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .pitch-deck .header-section .content-box p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 32px;
+  }
+  .pitch-deck .home-in .faq .faq-bottom {
+    padding: 24px;
+  }
+  .pitch-deck .why-section h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 16px;
+  }
+  .pitch-deck .why-section p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .pitch-deck .why-section .content {
+    margin: 20px 0;
+  }
+  .pitch-deck .stat-section .heading {
+    width: 100%;
+  }
+  .pitch-deck .stat-section .row {
+    margin-bottom: 45px;
+  }
+  .pitch-deck .stat-section .heading h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .pitch-deck .stat-section .stat-item h1,
+  .pitch-deck .stat-section .stat-item h1 span {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .pitch-deck .stat-section .stat-item span {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .pitch-deck .our-section .content-box h4 {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .pitch-deck .our-section .content-box p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+  .pitch-deck .our-section .process-line .image {
+    margin-top: 30px;
+  }
+  .pitch-deck .our-section .process-line.reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .pitch-deck .header-section .header-box {
+    flex-direction: column;
+  }
+  .pitch-deck .header-section .header-box .content-box {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+  .pitch-deck .header-section .header-box .image-box {
+    width: 100%;
+  }
+  .pitch-deck .header-section .banner-image {
+    height: 500px;
+  }
+  .pitch-deck .why-section h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 16px;
+  }
+  .pitch-deck .why-section p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .pitch-deck .why-section .content {
+    margin: 25px 0;
+  }
+  .pitch-deck .stat-section .heading {
+    width: 100%;
+  }
+  .pitch-deck .stat-section .row {
+    margin-bottom: 45px;
+  }
+  .pitch-deck .our-section .content-box h4 {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .pitch-deck .our-section .content-box p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+  .pitch-deck .our-section .process-line .image {
+    margin-top: 30px;
+  }
+  .pitch-deck .our-section .process-line.reverse {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .pitch-deck .header-section .content-box h1 {
+    font-size: 50px;
+    line-height: 62px;
+  }
+  .pitch-deck .why-section h1 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .pitch-deck .why-section p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .pitch-deck .our-section .content-box h4 {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .pitch-deck .our-section .content-box p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+@media (min-width: 1400px) {
+}
+
+.accordion-item .accordion-button {
+    background: #f2f4f7;
+}
+
+.hometestmnl .slick-prev:before, .hometestmnl .slick-next:before {
+color:#000;
+}
+.hometestmnl .slick-prev {
+    left: -100px;
+}
+.hometestmnl .slick-next {
+    right:-100px;
+}
+
+.hometestmnl .testcompanies {
+    margin-top:60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    }
+.hometestmnl .slick-dots li {
+    width: 15px;
+    background: #c0c0c0;
+    height: 15px;
+    border-radius: 50%;}
+ 
+.hometestmnl .slick-dots .slick-active {
+        color: white;
+        background-color: #6172f3;
+    }
+.hometestmnl .slick-dots li.slick-active button:before, .hometestmnl .slick-dots li button:before {
+        opacity: 0;
+    }
+    .case-studyslide
+    {
+        padding-bottom: 50px;
+    }
+.case-studyslide .casestudyitem    {
+    display:flex !important;
+    flex-direction: column;
+}
+.case-studyslide .card {
+    padding:0 10px !important;
+
+}
+.case-studyslide .casestudyitem span {
+    display: flex;
+}
+.casestudyitem .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.case-studyslide .casestudyitem .tags {
+    display: flex;
+    flex-direction: row;
+}
+.case-studyslide .slick-arrow {
+    top:inherit !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: -120px !important;
+margin: 0 auto;
+}
+.case-studyslide .slick-arrow.slick-prev {
+    left: -60px !important;
+    right: 0 !important;
+    font-size: 0 !important;
+    background-color: #fff;
+    border: 1px solid #eaecf0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-image: url(../assets/images/prev-arw.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.case-studyslide .slick-arrow.slick-prev:before, .case-studyslide .slick-arrow.slick-next:before {
+    color:#000;
+    font-size: 0 !important;
+}
+
+
+.case-studyslide .slick-arrow.slick-next {
+    left: 0 !important;
+    right: -60px !important;
+    border: 2px solid yellow;
+    color: #000;
+    font-size: 0 !important;
+    background-color: #fff;
+    border: 1px solid #eaecf0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-image: url(../assets/images/next-arw.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.casestudyitem .content span {
+    color: #3538cd;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.casestudyitem .content h4 {
+color: #101828;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin:10px 0;
+}
+
+.blogsingle .heading {padding:96px 0 20px 0;}
+.blogsingle .blog-list {
+    padding-bottom:120px;
+}

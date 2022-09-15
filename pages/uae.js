@@ -34,7 +34,7 @@ const ImgArray = [
   Image8
 ]
 export default function UAE({data}) {
-    const { MetaData, faqs } = data.attributes
+    const { MetaData, faqs, ClientName } = data.attributes
     return (
         <Layout>
             <Seo seo={MetaData[0]}/>
@@ -44,7 +44,7 @@ export default function UAE({data}) {
                 <Alumnussection />
                 <PitchDeckSection />
                 <Statsection />
-                <Testimonialsection />
+                <Testimonialsection data={ClientName.data} />
                 <CaseStudiessection />
                 <Pricingsection />
                 <Worksection />

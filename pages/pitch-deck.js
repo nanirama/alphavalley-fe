@@ -11,8 +11,8 @@ import Worksection from "../components/Pitchdeck/WorkSection"
 import FAQsection from '../components/Elements/FaqSection'
 import { fetchAPI } from "../lib/api";
 export default function Pitchdeck({data}) {
-    const { MetaData, testimonies, faqs } = data.attributes
-    console.log('data.attributes',testimonies.data)
+    const { MetaData, ClientName, faqs, case_studies } = data.attributes
+    console.log('case_studiescase_studies',case_studies)
     return (
         <Layout>
             <Seo seo={MetaData[0]}/>
@@ -22,10 +22,10 @@ export default function Pitchdeck({data}) {
                 <Investerdeck />
                 <WhyAlphavalley />
                 <div className='home-usa'>
-                <CaseStudiessection />
+                <CaseStudiessection data={case_studies.data} />
                 </div>
                 <Alumnussection />
-                <TestimonialsectionPitch data={testimonies.data} />
+                <TestimonialsectionPitch data={ClientName.data} />
                 <Worksection />
                 <FAQsection data={faqs.data} />
                 </div>

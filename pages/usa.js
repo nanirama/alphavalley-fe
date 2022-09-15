@@ -37,7 +37,7 @@ import ImageFile from "../assets/images/image-one-usa.jpg"
 export default function USA({data}) {
 
   
-    const { MetaData, faqs } = data.attributes
+    const { MetaData, faqs,ClientName } = data.attributes
     return (
         <Layout>
             <Seo seo={MetaData[0]}/>
@@ -47,7 +47,7 @@ export default function USA({data}) {
                 <Alumnussection />
                 <PitchDeckSection />
                 <Statsection />
-                <Testimonialsection />
+                <Testimonialsection data={ClientName.data} />
                 <CaseStudiessection />
                 <Pricingsection />
                 <Worksection />

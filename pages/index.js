@@ -8,16 +8,17 @@ import OtherSevicesection from "../components/Home/OtherSevicesection"
 import CTAsection1 from "../components/Elements/CTASection1"
 import { fetchAPI } from "../lib/api";
 
-export default function Home({data}) {
-  const { MetaData, faqs, testimonies } = data.attributes
+export default function Home({ data }) {
+  const { MetaData, faqs, ClientName } = data.attributes
+  console.log('testimoniestestimonies',ClientName)
   return (
     <Layout>
-      <Seo seo={MetaData[0]}/>
+      <Seo seo={MetaData[0]} />
       <div className='home'>
         <HeroSection />
         <StatSection />
         <Servicesection />
-        <Testimonialsection />
+        <Testimonialsection data={ClientName.data} />
         <OtherSevicesection />
         <CTAsection1 />
       </div>
@@ -26,7 +27,7 @@ export default function Home({data}) {
 }
 
 export async function getStaticProps() {
-    const homeData = await fetchAPI("/api/display-pages?filters[slug][$eq]=home&populate=*");
+  const homeData = await fetchAPI("/api/display-pages?filters[slug][$eq]=home&populate=*");
   return {
     props: {
       data: homeData.data[0]

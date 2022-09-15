@@ -38,8 +38,9 @@ export default function Header() {
                                        <div className="sections">
                                           <ImgLoader src={Icon2} width={22} height={22} alt="icon" />
                                           <div className="section-content">
-                                             <h6>Financial Modelling</h6>
+                                          <Link href="/financial-modelling"><a><h6>Financial Modelling</h6>
                                              <p>Measure active usage and target areas of improvement.</p>
+                                             </a></Link>
                                           </div>
                                        </div>
                                  </div>
@@ -47,8 +48,8 @@ export default function Header() {
                                        <div className="sections">
                                           <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
-                                             <h6>Pitch Deck Design</h6>
-                                             <p>Find retention drivers and make your customers smile.</p>
+                                          <Link href="/pitch-deck-design"><a><h6>Pitch Deck Design</h6>
+                                             <p>Find retention drivers and make your customers smile.</p></a></Link>
                                           </div>
                                        </div>
                                  </div>
@@ -118,7 +119,7 @@ export default function Header() {
                                     </a></Link>
                                  </div>
                                  <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <a href="/case-study/4">
+                                 <Link href="/casestudy/"><a>
                                        <div className="sections">
                                           <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
@@ -126,7 +127,7 @@ export default function Header() {
                                              <p>Find retention drivers and make your customers smile.</p>
                                           </div>
                                        </div>
-                                    </a>
+                                    </a></Link>
                                  </div>
                                  <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                  <Link href="/term-condition"><a>

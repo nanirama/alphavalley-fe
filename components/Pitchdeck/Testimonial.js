@@ -39,7 +39,7 @@ export default function TestimonialsectionPitch({data}) {
                             //const AuthImage = testiData?.data?.attributes?.ClientImage?.data?.attributes?.url ? testiData?.data?.attributes?.ClientImage?.data?.attributes?.url : DefaultImg
                             return(
                                 <div className="testimonial" key={index}>
-                                    <h3 className="mt-2 mb-5 text-center">{Content && Content}</h3>
+                                    <h3 className="mt-2 mb-5 text-center text-white">{Content && Content}</h3>
                                     <div className="user-info">
                                         <ImgLoader src={DefaultImg} width={64} height={64} alt={ClientName && ClientName} className="rounded-circle" />
                                         <p className="name mt-3">{ClientName && ClientName}</p>

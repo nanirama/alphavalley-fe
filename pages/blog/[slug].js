@@ -8,7 +8,7 @@ import Seo from '../../components/seo'
 import BlogIndex from '../../components/Blog'
 
 import { fetchAPI } from "../../lib/api";
-
+import CasestudyImg1 from "../../assets/images/case-study1.png"
 export default function BlogSingle({article}) {
     const { Metadata } = article.attributes
     console.log('article.attributes',article.attributes)
