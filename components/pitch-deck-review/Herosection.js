@@ -7,18 +7,18 @@ export default function Herosection() {
     return (
 
         <div className='home-usa'>
-                <div class="header-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="header-left">
+                <div className="header-section">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div className="header-left">
                                     <h1>Stunning, VC-grade Pitch Decks For <span>Busy Founders</span></h1>
                                     <p>Win over investors with a bullet proof investor deck. Crafted by a specialist team with proven experience.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-box">
-                                <div class="outer-box">
-                                    <div class="inner-box">
+                            <div className="col-lg-6 col-md-12 col-sm-12 col-12 form-box">
+                                <div className="outer-box">
+                                    <div className="inner-box">
                                     <ImgLoader src={AVLogo} alt="Cards" />
                                         <h6>Book Free Consultation</h6>
                                         <form>

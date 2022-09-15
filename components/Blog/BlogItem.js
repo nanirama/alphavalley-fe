@@ -9,7 +9,6 @@ import { fetcher } from '../../lib/api'
 import DefaultImg from '../../assets/images/default-img.png'
 
 export default function BlogItem({ data, categoryName='' }) {
-    //console.log('blog Single id', data)
     const { title, slug, excerpt, publishedAt, reading_time } = data.attributes
 
     const POST_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/blogs/${data.id}?populate=*`

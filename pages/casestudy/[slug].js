@@ -10,7 +10,7 @@ export default function BlogSingle({article}) {
     return (
         <Layout>
             <Seo seo={Meta[0]}/>
-            <CaseStudyIndex data={article}/>
+            {/* <CaseStudyIndex data={article}/> */}
         </Layout>
     )
 }

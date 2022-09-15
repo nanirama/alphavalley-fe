@@ -39,7 +39,7 @@ export default function Testimonialsection({ data }) {
                             {data && data.map((item, index) => {
                                 const { Content, ClientName, Designation, publishedAt } = item.attributes
                                 return (
-                                    <div>
+                                    <div key={index}>
                                         <h3>{Content && Content}</h3>
                                         <div className="user">
                                             <ImgLoader src={DefaultImg} width={64} height={64} alt={ClientName && ClientName} className="rounded-circle" />

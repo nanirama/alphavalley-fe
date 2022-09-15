@@ -19,8 +19,8 @@ export default function GallerySection({ ImgArray }) {
 
   useEffect(() => {
 
-    setNav1(slider1);
-    setNav2(slider2);
+    // setNav1(slider1);
+    // setNav2(slider2);
 
   });
 

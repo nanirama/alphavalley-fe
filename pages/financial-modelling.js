@@ -19,7 +19,7 @@ import { fetchAPI } from "../lib/api";
     return (
         <Layout>
               <Seo seo={MetaData[0]}/>
-            <div class="pitch-deck">
+            <div className="pitch-deck">
                 <Herosection />
                 <StartupSection />
                 <Investerdeck />
