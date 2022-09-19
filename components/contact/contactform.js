@@ -272,7 +272,7 @@ export default function Contactform() {
                                         </div>
                                     </div>
                                     <ReCAPTCHA size="normal" sitekey="6LeeNQ4iAAAAAOm4Jr1-0BOYihIiDUFb1XKmfghR" />
-                                    {errmessage && <div class="alert alert-danger" role="alert">{errmessage}</div>}
+                                    {errmessage && <div className="alert alert-danger" role="alert">{errmessage}</div>}
                                     <div className="sm:col-span-2 sm:flex sm:justify-end mb-3">
                                         <button
                                             type="submit"
