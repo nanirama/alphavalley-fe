@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ImgLoader from '../Image'
 
 
@@ -34,7 +35,7 @@ export default function FAQsection({data}) {
                 <div className="faq-bottom">
                     <h2>Still have questions?</h2>
                     <p>Can’t find the answer you’re looking for? Please get in touch </p>
-                    <a href="/contact"><button className="btn">Contact us</button></a>
+                    <Link href="/contact"><a className="btn">Contact us</a></Link>
                 </div>
             </div>
         </div>

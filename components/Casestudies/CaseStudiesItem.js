@@ -1,22 +1,19 @@
 import Link from 'next/link'
 import useSWR from "swr";
+import ReactMarkdown from "react-markdown"
 import moment from 'moment';
 import ImgLoader from '../Image'
-// import Author from './Author'
 import { fetcher } from '../../lib/api'
 
-// import Author from "../../assets/images/test-avatar.png"
-
-import DefaultImg from '../../assets/images/default-img.png'
 import CasestudyImg1 from "../../assets/images/case-study1.png"
 export default function CaseStudiesItem({ data }) {
-    console.log('casestudy Single id', data)
-    const { title, slug, excrept, publishedAt, Clientname, tags, banner } = data.attributes
-
     const POST_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/case-studies/${data.id}?populate=*`
     const { data: postData, error } = useSWR(POST_ENDPOINT, fetcher);
-    const bannerImage = banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.url ? banner.data[0].attributes.url : CasestudyImg1
-    return (
+    console.log('postDatapostData',postData)
+    if(postData){
+        const { title, slug, excrept, publishedAt, Clientname, tags, banner } = postData.data.attributes
+        const bannerImage = banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.url ? banner.data[0].attributes.url : CasestudyImg1
+        return (
         <div className="col-lg-6 col-md-12 col-sm-12 col-12 my-3">
             <Link href={`/casestudy/${slug}`}>
                 <a>
@@ -27,12 +24,12 @@ export default function CaseStudiesItem({ data }) {
 
                         <div className="content col-sm-6">
                             <span>{Clientname && Clientname} • <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></span>
-                            <h4>{title && title}</h4>
-                            {excrept && <p dangerouslySetInnerHTML={{ __html: excrept }} ></p>}    
+                            <h4 className='ttl-minhght'>{title && title}</h4>
+                            {excrept && <p className="min-height" ><ReactMarkdown>{excrept}</ReactMarkdown></p>}    
                             {tags && tags.data && tags.data.length > 0 && (
                                 <div className="tags d-flex flex-row justify-content-start align-items-center flex-wrap mt-4">
-                                    {tags.data.map((item, index) => (
-                                        <span className={index % 2 == 0 ? 'tagsbg' : 'tagsbg2'} key={index}>{item.attributes.name}</span>
+                                    {tags.data.slice(0,2).map((item, index) => (
+                                        <Link href={`/casestudy/tag/${item.attributes.slug}`} key={index}><a className={index % 2 == 0 ? 'tagsbg' : 'tagsbg2'}>{item.attributes.name}</a></Link>
                                     ))}
                                 </div>
                             )}
@@ -41,6 +38,13 @@ export default function CaseStudiesItem({ data }) {
                 </a>
             </Link>
         </div>
-    )
+        )
+    }
+    else
+    {
+        return null;
+    }
+    
+   
 
 }

@@ -5,7 +5,6 @@ import CaseStudiesIndex from "../../components/Casestudies/CaseStudiesIndex";
 import { fetchAPI } from "../../lib/api";
 
 export default function index({ articles }) {
-    console.log('carticles', articles)
     return (
         <Layout>
              <div className='home-usa blogsingle'>

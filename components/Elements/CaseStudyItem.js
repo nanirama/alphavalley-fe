@@ -24,10 +24,10 @@ export default function CaseStudyItem({ id }) {
                             {title && <h3>{title}</h3>}
                             <ImgLoader src={Casestudyarw} width={24} height={24} alt="link" />
                         </div>
-                        {excrept && <p dangerouslySetInnerHTML={{ __html: excrept }} ></p>}
+                        {excrept && <p dangerouslySetInnerHTML={{ __html: excrept }} className='min-height' ></p>}
                         {tags && tags.data && tags.data.length > 0 && (
                             <div className="tags d-flex flex-row justify-content-start align-items-center flex-wrap">
-                                {tags.data.map((item, index) => (
+                                {tags.data.slice(0,2).map((item, index) => (
                                     <span className={index % 2 == 0 ? 'tagsbg' : 'tagsbg2'} key={index}>{item.attributes.name}</span>
                                 ))}
                             </div>

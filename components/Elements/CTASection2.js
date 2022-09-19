@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ImgLoader from '../Image'
 
 
@@ -11,7 +12,7 @@ export default function CTAsection2() {
             <div className="faq-bottom">
                 <h4>Want to learn more?</h4>
                 <p>Can’t find the answer you’re looking for? Please get in touch</p>
-                <a href="/contact"><button className="btn">CONTACT NOW</button></a>
+                <Link href="/contact"><a className="btn">CONTACT NOW</a></Link>
             </div>
             </div>
         </div>

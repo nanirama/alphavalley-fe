@@ -33,14 +33,15 @@ export default function Herosection() {
                                 <div className="inner-box">
                                 <ImgLoader src={AVlogo} width={32} height={32} alt="AVlogo" />
                                     <h6>Book Free Consultation</h6>
-                                    <form>
+                                    {/* <form>
                                         <div className="form-group"><label htmlFor="name">Name *</label><input type="text" className="form-control" id="name" placeholder="Enter your name" />
                                         </div>
                                         <div className="form-group"><label htmlFor="email">Email *</label>
                                             <input type="email" className="form-control" id="email" placeholder="Enter your email" /></div>
                                         <div className="form-group"><button className="btn" type="submit">Book Now</button></div>
-                                    </form>
-                                </div>
+                                    </form> */}
+                                    <iframe width='100%' height='590px' src='https://bigin.zoho.in/crm/WebFormServeServlet?rid=f1a1faee80712dc9c0d45324653a5bd0d87eae1828d17cedef2ad59a05773099gid6cd952f3e5be67584d0644fe79b8ff8f467182910d36d1784d783e5c92f37855'></iframe>
+                               </div>
                             </div>
                         </div>
                     </div>

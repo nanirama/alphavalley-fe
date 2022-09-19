@@ -1,6 +1,6 @@
 import Seo from '../components/seo'
 import Layout from "../components/layout"
-import Herosection from '../components/USA/Herosection'
+import UsaHerosection from '../components/USA/UsaHerosection'
 //import Imagesection from '../components/USA/Imagesection'
 import GallerySection from '../components/USA/GallerySection'
 import Alumnussection from '../components/USA/alumnussection'
@@ -42,7 +42,7 @@ export default function USA({data}) {
         <Layout>
             <Seo seo={MetaData[0]}/>
             <div className='home-usa'>
-                <Herosection />
+                <UsaHerosection />
                 <GallerySection ImgArray={ImgArray} />
                 <Alumnussection />
                 <PitchDeckSection />

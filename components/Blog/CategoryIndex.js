@@ -11,12 +11,10 @@ import CategoryList from './CategoryList'
 export default function CategoryIndex({ category, categories}) {
     const { name,slug, blogs, description } = category.attributes
     const articles = blogs.data
-    console.log('articles',articles)
     
     const [pageIndex, setPageIndex] = useState(1);
     const recordsPerPage = 6
     const totalRecords = articles.length
-    console.log('totalRecords',totalRecords)
     let data = articles.slice((pageIndex - 1) * recordsPerPage, pageIndex * recordsPerPage);
     return (
         <div className="container">

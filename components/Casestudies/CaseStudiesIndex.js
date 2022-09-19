@@ -7,9 +7,7 @@ import Pagination from './Pagination'
 
 
 export default function CaseStudiesIndex({ articles}) {
-
-    console.log('articlesarticles',articles)
-    
+   
     const [pageIndex, setPageIndex] = useState(1);
     const recordsPerPage = 6
     const totalRecords = articles.length

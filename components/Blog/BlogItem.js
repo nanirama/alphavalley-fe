@@ -30,8 +30,8 @@ export default function BlogItem({ data, categoryName='' }) {
                         </div>
                         <div className="content w-100">
                             <span>{catName && catName}</span>
-                            <h4>{title && title}</h4>
-                            <p>{excerpt && excerpt}....</p>
+                            <h4 className='ttl-minhght'>{title && title}</h4>
+                            <p className="min-height">{excerpt && excerpt}....</p>
                             {author && author.data && author.data.id && <Author author={author} publishedAt={publishedAt} />}
                         </div>
                     </div>
