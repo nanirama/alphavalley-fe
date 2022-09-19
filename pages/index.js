@@ -10,7 +10,6 @@ import { fetchAPI } from "../lib/api";
 
 export default function Home({ data }) {
   const { MetaData, faqs, ClientName } = data.attributes
-  console.log('testimoniestestimonies',ClientName)
   return (
     <Layout>
       <Seo seo={MetaData[0]} />
