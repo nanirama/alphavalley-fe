@@ -6,10 +6,11 @@ import StatSection from "../components/Elements/StatSection"
 import Testimonialsection from "../components/Elements/Testimonialsection"
 import OtherSevicesection from "../components/Home/OtherSevicesection"
 import CTAsection1 from "../components/Elements/CTASection1"
+import CaseStudiessection from "../components/Elements/CaseStudies"
 import { fetchAPI } from "../lib/api";
 
 export default function Home({ data }) {
-  const { MetaData, faqs, ClientName } = data.attributes
+  const { MetaData, faqs, ClientName, case_studies  } = data.attributes
   return (
     <Layout>
       <Seo seo={MetaData[0]} />
@@ -18,6 +19,9 @@ export default function Home({ data }) {
         <StatSection />
         <Servicesection />
         <Testimonialsection data={ClientName.data} />
+        <div className='home-usa'>
+        <CaseStudiessection data={case_studies.data} />
+        </div>        
         <OtherSevicesection />
         <CTAsection1 />
       </div>
