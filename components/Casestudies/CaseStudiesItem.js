@@ -2,6 +2,7 @@ import Link from 'next/link'
 import useSWR from "swr";
 import ReactMarkdown from "react-markdown"
 import moment from 'moment';
+import parse from "html-react-parser";
 import ImgLoader from '../Image'
 import { fetcher } from '../../lib/api'
 
@@ -25,7 +26,8 @@ export default function CaseStudiesItem({ data }) {
                         <div className="content col-sm-6">
                             <span>{Clientname && Clientname} • <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></span>
                             <h4 className='ttl-minhght'>{title && title}</h4>
-                            {excrept && <p className="min-height" ><ReactMarkdown>{excrept}</ReactMarkdown></p>}    
+                            {/* {excrept && <p className="min-height" ><ReactMarkdown>{excrept}</ReactMarkdown></p>}     */}
+                            <div className="min-height">{excrept && parse(`<p> ${excrept} </p>`)}</div>
                             {tags && tags.data && tags.data.length > 0 && (
                                 <div className="tags d-flex flex-row justify-content-start align-items-center flex-wrap mt-4">
                                     {tags.data.slice(0,2).map((item, index) => (
