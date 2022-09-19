@@ -13,7 +13,6 @@ export default function Contactform() {
     const [phone, setPhone] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
-    const [success, setSuccess] = useState("");
     const [errmessage, setErrMessage] = useState("");
 
     const router = useRouter()
@@ -275,7 +274,7 @@ export default function Contactform() {
                                         </div>
                                     </div>
                                     <ReCAPTCHA size="normal" sitekey="6LeeNQ4iAAAAAOm4Jr1-0BOYihIiDUFb1XKmfghR" />
-                                    {errmessage && <div className="alert alert-danger" role="alert">{errmessage}</div>}
+                                    {errmessage && <div className="alert alert-danger mb-3" role="alert">{errmessage}</div>}
                                     <div className="sm:col-span-2 sm:flex sm:justify-end mb-3 mt-4">
                                         <button
                                             type="submit"
@@ -284,8 +283,7 @@ export default function Contactform() {
                                         >
                                             Send message
                                         </button>
-                                    </div>
-                                    {success && <div className="alert alert-success text-center" role="alert">{success}</div>}
+                                    </div>                                   
                                 </form>
 
                             </div>
