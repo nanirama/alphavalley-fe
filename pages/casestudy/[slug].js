@@ -9,7 +9,7 @@ export default function BlogSingle({article}) {
     const { Meta } = article.attributes
     return (
         <Layout>
-            {/* {Meta && Meta[0] && <Seo seo={Meta[0]}/>} */}
+            {Meta && Meta[0] && <Seo seo={Meta[0]}/>}
             <CaseStudyIndex data={article}/>
         </Layout>
     )

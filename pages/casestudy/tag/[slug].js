@@ -1,19 +1,20 @@
 import Layout from "../../../components/layout"
-
+import Seo from '../../../components/seo'
 import CaseStudiesIndex from "../../../components/Casestudies/CaseStudiesIndex";
 
 import { fetchAPI } from "../../../lib/api";
 
 export default function TagSingle({ data }) {
-
-  console.log('datadata', data.attributes.case_studies.data)
-    return (
-        <Layout>
-             <div className='home-usa blogsingle'>
-                    <CaseStudiesIndex  articles={data.attributes.case_studies.data} />
-                </div>
-        </Layout>
-    )
+  console.log('datadata', data)
+  const { Metadata } = data.attributes
+  return (
+    <Layout>
+      {Metadata && Metadata[0] && <Seo seo={Metadata[0]} />}
+      <div className='home-usa blogsingle'>
+        <CaseStudiesIndex articles={data.attributes.case_studies.data} />
+      </div>
+    </Layout>
+  )
 }
 
 
@@ -32,7 +33,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params;
   const [articleRes] = await Promise.all([
-    fetchAPI(`/api/tags?filters[slug][$eq]=${slug}&populate=*`)    
+    fetchAPI(`/api/tags?filters[slug][$eq]=${slug}&populate=*`)
   ]);
 
   return {
