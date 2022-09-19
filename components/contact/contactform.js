@@ -2,6 +2,7 @@ import React, { useCallback, useState, Controller } from "react";
 import Link from 'next/link'
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from 'react-google-recaptcha'
+import { useRouter } from 'next/router'
 
 
 
@@ -14,6 +15,8 @@ export default function Contactform() {
     const [message, setMessage] = useState("");
     const [success, setSuccess] = useState("");
     const [errmessage, setErrMessage] = useState("");
+
+    const router = useRouter()
 
    
 
@@ -71,7 +74,7 @@ export default function Contactform() {
             const addResponse = await add.text();
             console.log(addResponse);
             if(addResponse){
-                setSuccess('Thank you for contacting us. Our team will connect with you shortly to discuss about your Pitch Deck needs')
+                router.push('/thankyou')
             }
           }
         
@@ -273,7 +276,7 @@ export default function Contactform() {
                                     </div>
                                     <ReCAPTCHA size="normal" sitekey="6LeeNQ4iAAAAAOm4Jr1-0BOYihIiDUFb1XKmfghR" />
                                     {errmessage && <div className="alert alert-danger" role="alert">{errmessage}</div>}
-                                    <div className="sm:col-span-2 sm:flex sm:justify-end mb-3">
+                                    <div className="sm:col-span-2 sm:flex sm:justify-end mb-3 mt-4">
                                         <button
                                             type="submit"
                                             className="formsubmit"
