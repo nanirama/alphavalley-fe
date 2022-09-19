@@ -16,24 +16,20 @@ export default function CaseStudyItem({ id }) {
         const bannerImage = banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.url ? banner.data[0].attributes.url : CasestudyImg1
         return (
             <div className="casestudyitem card">
-                <Link href={`/casestudy/${slug}`}>
-                    <a>
-                        {bannerImage && <ImgLoader src={bannerImage} alt={title && title} width={400} height={240} />}
+                        {bannerImage && <Link href={`/casestudy/${slug}`}><a><ImgLoader src={bannerImage} alt={title && title} width={400} height={240} /></a></Link>}
                         <span>{Clientname && Clientname} • <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></span>
                         <div className="heading">
-                            {title && <h3>{title}</h3>}
+                            {title && <Link href={`/casestudy/${slug}`}><a><h3>{title}</h3></a></Link>}
                             <ImgLoader src={Casestudyarw} width={24} height={24} alt="link" />
                         </div>
                         {excrept && <p dangerouslySetInnerHTML={{ __html: excrept }} className='min-height' ></p>}
                         {tags && tags.data && tags.data.length > 0 && (
                             <div className="tags d-flex flex-row justify-content-start align-items-center flex-wrap">
                                 {tags.data.slice(0,2).map((item, index) => (
-                                    <span className={index % 2 == 0 ? 'tagsbg' : 'tagsbg2'} key={index}>{item.attributes.name}</span>
+                                    <Link href={`/casestudy/tag/${item.attributes.slug}`} key={index}><a className={index % 2 == 0 ? 'tagsbg' : 'tagsbg2'}>{item.attributes.name}</a></Link>
                                 ))}
                             </div>
                         )}
-                    </a>
-                </Link>
             </div>
         )
     }
