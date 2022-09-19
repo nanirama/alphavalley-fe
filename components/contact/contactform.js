@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import ReCAPTCHA from 'react-google-recaptcha'
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -79,6 +80,7 @@ const submitEnquiryForm = (gReCaptchaToken) => {
             className="form-control mb-3"
             placeholder="Message"
           />
+          <ReCAPTCHA size="normal" sitekey="6LfLFw4iAAAAAKj0H7iflRMk8ymVcKUwWYor-Eia" />
           <button type="submit" className="btn btn-light">
             Submit
           </button>
