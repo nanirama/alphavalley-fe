@@ -12,7 +12,6 @@ import FAQsection from '../components/Elements/FaqSection'
 import { fetchAPI } from "../lib/api";
 export default function Pitchdeck({data}) {
     const { MetaData, ClientName, faqs, case_studies } = data.attributes
-    console.log('case_studiescase_studies',case_studies)
     return (
         <Layout>
             <Seo seo={MetaData[0]}/>

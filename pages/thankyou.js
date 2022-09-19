@@ -3,13 +3,12 @@ import Seo from '../components/seo'
 import Link from 'next/link'
 import { fetchAPI } from "../lib/api";
 export default function Thankyou({ data }) {
-    const { MetaData, ClientName, faqs, case_studies } = data.attributes
-    console.log('case_studiescase_studies', case_studies)
+    const { MetaData } = data.attributes
     return (
         <Layout>
             <Seo seo={MetaData[0]} />
             <div className='pitch-deck my-5 py-5'>
-                <div className="form-box row">
+                <div className="form-box row d-flex flex-row justify-content-center align-items-center">
                     <div className="col-lg-6 col-md-9 col-sm-12 col-12">
                         <div className="alert alert-success text-center" role="alert">Thank you for contacting us. Go to <Link href="/"><a>Home</a></Link></div>
                     </div>
