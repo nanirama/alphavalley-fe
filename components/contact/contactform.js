@@ -1,6 +1,7 @@
 
 
 import React from "react";
+import Link from 'next/link'
 import { useForm } from "react-hook-form";
 import { useState, Controller } from "react";
 
@@ -157,7 +158,7 @@ export default function Contactform() {
                                                     <option value="AUS">AUS</option>
                                                 </select> */}
                                                 <input
-                                                    {...register("phone")}
+                                                    {...register("phone", { required: true })}
                                                     id="phone"
                                                     name="phone"
                                                     type="phone"
@@ -167,6 +168,7 @@ export default function Contactform() {
                                                     onChange={(e) => setPhone(e.target.value)}
                                                     value={phone}
                                                 />
+                                                 {errors.phone && <p className="error text-red-500">This field is required.</p>}
                                             </div>
                                         </div>
                                     </div>
@@ -206,7 +208,7 @@ export default function Contactform() {
                                         </div>
                                         <div className="mt-1">
                                             <textarea
-                                                {...register("message")}
+                                                {...register("message", { required: true })}
                                                 id="message"
                                                 name="message"
                                                 rows={4}
@@ -217,6 +219,7 @@ export default function Contactform() {
                                                 value={message}
                                                 placeholder='Leave us a message...'
                                             />
+                                            {errors.message && <p className="error text-red-500">This field is required.</p>}
                                         </div>
                                         <div className="form-check mt-2">
                                             <input
@@ -233,7 +236,7 @@ export default function Contactform() {
                                                 id="flexCheckDefault"
                                             /> */}
                                             <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                You agree to our friendly <a href="#">privacy policy</a>.
+                                                You agree to our friendly <Link href="/privacy-policy"><a>privacy policy</a></Link>.
                                             </label>
                                             {errors.acceptTerms && <p className="error text-red-500">Please accept Terms & Conditions</p>}
                                         </div>
