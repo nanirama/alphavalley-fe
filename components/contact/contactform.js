@@ -80,7 +80,7 @@ const submitEnquiryForm = (gReCaptchaToken) => {
             className="form-control mb-3"
             placeholder="Message"
           />
-          <ReCAPTCHA size="normal" sitekey="6LfLFw4iAAAAAKj0H7iflRMk8ymVcKUwWYor-Eia" />
+          <ReCAPTCHA size="normal" sitekey="6LeeNQ4iAAAAAOm4Jr1-0BOYihIiDUFb1XKmfghR" />
           <button type="submit" className="btn btn-light">
             Submit
           </button>
