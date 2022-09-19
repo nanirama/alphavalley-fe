@@ -247,7 +247,7 @@ export default function Contactform() {
                                             Send message
                                         </button>
                                     </div>
-                                    {success && <div class="alert alert-success text-center" role="alert">{success}</div>}
+                                    {success && <div className="alert alert-success text-center" role="alert">{success}</div>}
                                 </form>
 
                             </div>
