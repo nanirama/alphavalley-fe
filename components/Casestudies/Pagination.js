@@ -46,7 +46,7 @@ const Pagination = ({ pageIndex, setPageIndex, recordsPerPage, totalRecords }) =
                 <li className="page-item"><button className="page-link"
                     onClick={() => setPageIndex(pageIndex + 1)}
                     disabled={pageIndex === pageCount}
-                >Next
+                ><span>Next</span>
                     <ImgLoader src={NextArw} width={20} height={20} alt="Prev" />
                 </button></li>
             </ul>

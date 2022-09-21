@@ -12,7 +12,7 @@ const Author = ({ author, publishedAt }) => {
     console.log('userData',userData)
     const avatarImage = userData && userData.data && userData.data.attributes.avatar && userData.data.attributes.avatar.data && userData.data.attributes.avatar.data.attributes && userData.data.attributes.avatar.data.attributes.url ? userData.data.attributes.avatar.data.attributes.url : DefaultImg
     return (
-        <div className="user my-4 d-flex flex-row justify-content-start align-items-center">
+        <div className="user mt-4 d-flex flex-row align-items-center">
             <ImgLoader src={avatarImage} width={56} height={56} alt={author.data.attributes.firstName} />
             <div className="content">
                 <p className="name">{author.data.attributes.firstName} {author.data.attributes.lastName}</p>

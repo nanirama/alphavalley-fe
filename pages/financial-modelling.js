@@ -7,7 +7,7 @@ import Investerdeck from "../components/financial-modeling/Investerdeck"
 import OurProcess from "../components/financial-modeling/Ourprocess"
 import StatSection from "../components/financial-modeling/Statsection"
 import CaseStudiessection from "../components/Elements/CaseStudies"
-import Alumnussection from "../components/Pricing/alumnussection"
+import Alumnussection from "../components/Elements/alumnussection"
 import TestimonialsectionPitch from "../components/Pitchdeck/Testimonial"
 import Worksection from "../components/Pitchdeck/WorkSection"
 import FAQsection from '../components/Elements/FaqSection'

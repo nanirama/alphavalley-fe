@@ -36,9 +36,8 @@ export default function StatSection() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6 col-md-12">
-                        <ImgLoader src={Statimg} alt="Cards" />
-                       
+                        <div className="col-lg-6 col-md-12 alphimg">
+                            <ImgLoader src={Statimg} alt="Cards" />
                         </div>
                     </div>
                 </div>

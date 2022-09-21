@@ -33,7 +33,7 @@ export default function Testimonialsection({ data }) {
         <div className="testimonial-section">
             <div className="container">
                 <div className="row">
-                <div className="col-xl-2 col-lg-2 col-md-0 col-sm-0 col-0"></div>
+                    <div className="col-xl-2 col-lg-2 col-md-0 col-sm-0 col-0"></div>
                     <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 hometestmnl">
                         <Slider {...settings}>
                             {data && data.map((item, index) => {
@@ -52,18 +52,21 @@ export default function Testimonialsection({ data }) {
                             })}
 
                         </Slider>
-
-                        <div id="companies">
-                            <div className="testcompanies">
-                                <ImgLoader src={TestImg1} width={130} height={40} alt="Logo" />
-                                <ImgLoader src={TestImg2} width={130} height={40} alt="Logo" />
-                                <ImgLoader src={TestImg3} width={130} height={40} alt="Logo" />
-                                <ImgLoader src={TestImg4} width={130} height={40} alt="Logo" />
-                                <ImgLoader src={TestImg5} width={130} height={40} alt="Logo" />
+                    </div>
+                    <div className="col-xl-2 col-lg-2 col-md-0 col-sm-0 col-0"></div>
+                </div>
+                <div className="row">
+                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-4 px-4">
+                        <div id="companies mt-4 w-100 px-4">
+                            <div className="testcompanies flex flex-row justify-between w-100 pt-12 px-4">
+                                <ImgLoader src={TestImg1} width={98} height={32} alt="Logo" />
+                                <ImgLoader src={TestImg2} width={142} height={40} alt="Logo" />
+                                <ImgLoader src={TestImg3} width={126} height={32} alt="Logo" />
+                                <ImgLoader src={TestImg4} width={134} height={40} alt="Logo" />
+                                <ImgLoader src={TestImg5} width={184} height={48} alt="Logo" />
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-2 col-lg-2 col-md-0 col-sm-0 col-0"></div>
                 </div>
             </div>
         </div>

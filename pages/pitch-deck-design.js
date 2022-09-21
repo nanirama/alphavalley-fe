@@ -6,7 +6,7 @@ import Investerdecksection from "../components/pitch-deck-design/Investerdecksec
 import OurProcess from "../components/financial-modeling/Ourprocess"
 import WhyAlphavalley from "../components/Pitchdeck/WhyAlphavalley"
 import CaseStudiessection from "../components/Elements/CaseStudies"
-import Alumnussection from "../components/Pricing/alumnussection"
+import Alumnussection from "../components/Elements/alumnussection"
 import TestimonialsectionPitch from "../components/Pitchdeck/Testimonial"
 import Worksection from "../components/Pitchdeck/WorkSection"
 import FAQsection from '../components/Elements/FaqSection'

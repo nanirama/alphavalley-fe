@@ -16,7 +16,7 @@ export default function Pitchdeckservicesection() {
                     </div>
                     <div className="image-content">
                         <div className="row">
-                            <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div className="row">
                                     <div className="col-sm-6 col-12">
                                         <div className="box">
@@ -64,16 +64,19 @@ export default function Pitchdeckservicesection() {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div className="image">
+                                    <ImgLoader src={Intelligentimg} width={575} height={319} alt="Cards" />
+                                    <div className='hand-arrow'>
+                                        <ImgLoader src={Handarw} alt="Cards" className="hand-arrow" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="image">
 
-                    <ImgLoader src={Intelligentimg} width={575} height={319} alt="Cards" />
-                    <div className='hand-arrow'>
-                        <ImgLoader src={Handarw} alt="Cards" className="hand-arrow" />
-                    </div>
-                </div>
             </div>
         </div>
     )

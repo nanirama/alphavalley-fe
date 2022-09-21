@@ -121,6 +121,7 @@ const Index = ({ data }) => {
                                 </ReactMarkdown> */}
 									{parse(`<p> ${casestudy} </p>`)}
 									<br />
+									<hr/>
 									<div className="tag-box">
 										{tags && tags.data && tags.data.length > 0 && (
 											<div className="tags d-flex flex-row justify-content-start align-items-center flex-wrap mt-4">

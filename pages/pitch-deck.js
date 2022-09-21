@@ -3,9 +3,10 @@ import Seo from '../components/seo'
 import Herosection from '../components/Pitchdeck/Herosection'
 import Pitchdeckservicesection from "../components/Pitchdeck/Intelligentpitchdeck"
 import Investerdeck from "../components/Pitchdeck/investerdeck"
+import OurProcess from "../components/financial-modeling/Ourprocess"
 import WhyAlphavalley from "../components/Pitchdeck/WhyAlphavalley"
 import CaseStudiessection from "../components/Elements/CaseStudies"
-import Alumnussection from "../components/Pricing/alumnussection"
+import Alumnussection from "../components/Elements/alumnussection"
 import TestimonialsectionPitch from "../components/Pitchdeck/Testimonial"
 import Worksection from "../components/Pitchdeck/WorkSection"
 import FAQsection from '../components/Elements/FaqSection'
@@ -19,6 +20,7 @@ export default function Pitchdeck({data}) {
                 <Herosection />
                 <Pitchdeckservicesection />
                 <Investerdeck />
+                <OurProcess/>
                 <WhyAlphavalley />
                 <div className='home-usa'>
                 <CaseStudiessection data={case_studies.data} />

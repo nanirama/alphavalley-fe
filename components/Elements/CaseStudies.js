@@ -21,6 +21,8 @@ export default function CaseStudiessection({ data }) {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '5%',
         responsive: [
             {
               breakpoint: 1024,
@@ -29,15 +31,28 @@ export default function CaseStudiessection({ data }) {
               }
             },
             {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 3,
+                centerMode: false,
+                centerPadding: '0%',
+              }
+            },
+         
+            {
               breakpoint: 769,
               settings: {
                 slidesToShow: 2,
+                centerMode: false,
+                centerPadding: '0%',
               }
             },
             {
               breakpoint: 600,
               settings: {
                 slidesToShow: 1,
+                centerMode: false,
+                centerPadding: '0%',
               }
             }
           ]
@@ -49,10 +64,12 @@ export default function CaseStudiessection({ data }) {
                     <h1>Case Studies</h1>
                     <p>Select case studies of our contribution to the startup ecosystem.</p>
                 </div>
-                <div className="case-studyslide">
+                <div className="case-studyslide case-study">
+                  <div className="w-100 relative">
                     <Slider {...settings}>
                         {data && data.map((item, index)=> <CaseStudyItem key={index} id={item.id}/>)}
                     </Slider>
+                </div>
                 </div>
             </div>
         </div>

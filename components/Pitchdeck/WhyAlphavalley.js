@@ -35,7 +35,8 @@ const WhyAlphavalley = () => {
                </div>
             </div>
          </div>
-         <div className="col-lg-6 col-md-12"><ImgLoader src={StatImage} width={560} height={560} alt="" /></div>
+         <div className="col-lg-6 col-md-12 alphimg">
+            <ImgLoader src={StatImage} width={560} height={560} alt="" /></div>
       </div>
    </div>
 </div>

@@ -4,7 +4,7 @@ import ImgLoader from '../Image'
 
 import Accordion from 'react-bootstrap/Accordion';
 
-export default function FAQsection({data}) {
+export default function FAQsection({ data }) {
 
     return (
         <div className="faq">
@@ -17,16 +17,16 @@ export default function FAQsection({data}) {
 
                     <div className='faqsection'>
                         <Accordion defaultActiveKey="0">
-                            {data && data.map((item, index)=>{
+                            {data && data.map((item, index) => {
                                 const { title, description } = item.attributes
-                                return(
-                                        <Accordion.Item eventKey={index} key={index}>
-                                            <Accordion.Header>{title && title}</Accordion.Header>
-                                            <Accordion.Body>
-                                                <p>{description && description}</p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        )
+                                return (
+                                    <Accordion.Item eventKey={index} key={index}>
+                                        <Accordion.Header>{title && title}</Accordion.Header>
+                                        <Accordion.Body>
+                                            <p>{description && description}</p>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                )
                             })}
                         </Accordion>
                     </div>

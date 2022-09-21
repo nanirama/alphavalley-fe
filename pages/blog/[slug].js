@@ -37,7 +37,7 @@ export async function getStaticPaths() {
   export async function getStaticProps({ params }) {
     const { slug } = params;
     const [articleRes] = await Promise.all([
-      fetchAPI(`/api/blogs?filters[slug][$eq]=${slug}&populate=*`)    
+      fetchAPI(`/api/blogs?filters[slug][$eq]=${slug}&sort[0]=createdAt:DESC&populate=*`)    
     ]);
   
     return {
