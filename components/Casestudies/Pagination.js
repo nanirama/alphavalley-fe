@@ -1,8 +1,8 @@
 
 import ImgLoader from '../Image'
 
-import PrevArw from "../../assets/images/prev-arw.png"
-import NextArw from "../../assets/images/next-arw.png"
+import PrevArw from "../../assets/images/svg/prev-arw.svg"
+import NextArw from "../../assets/images/svg/next-arw.svg"
 
 const Pagination = ({ pageIndex, setPageIndex, recordsPerPage, totalRecords }) => {
     const pageCount = Math.ceil(totalRecords / recordsPerPage).toFixed();
@@ -20,11 +20,11 @@ const Pagination = ({ pageIndex, setPageIndex, recordsPerPage, totalRecords }) =
         <nav aria-label="Page navigation example">
             <ul className="pagination">
                 <li className="page-item">
-                    <button className="page-link"
+                    <button className="page-link  d-flex align-items-center justify-content-center"
                         onClick={() => setPageIndex(pageIndex - 1)}
                         disabled={pageIndex === 1}
                     >
-                        <ImgLoader src={PrevArw} width={20} height={20} alt="Prev" />
+                        <ImgLoader src={PrevArw} width={12} height={12} alt="Prev" />
                         <span>Previous</span>
                     </button>
                 </li>
@@ -43,11 +43,11 @@ const Pagination = ({ pageIndex, setPageIndex, recordsPerPage, totalRecords }) =
                         </li>
                     ))}
                 </div>
-                <li className="page-item"><button className="page-link"
+                <li className="page-item"><button className="page-link  d-flex align-items-center justify-content-center"
                     onClick={() => setPageIndex(pageIndex + 1)}
                     disabled={pageIndex === pageCount}
                 ><span>Next</span>
-                    <ImgLoader src={NextArw} width={20} height={20} alt="Prev" />
+                    <ImgLoader src={NextArw} width={12} height={12} alt="Prev" />
                 </button></li>
             </ul>
         </nav>

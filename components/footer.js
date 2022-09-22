@@ -2,10 +2,10 @@ import Link from 'next/link'
 import ImgLoader from './Image'
 import Logo from "../assets/images/logoicon.png"
 
-import Icon4 from "../assets/images/twittericon.png"
-import Icon5 from "../assets/images/linked-inicon.png"
-import Icon6 from "../assets/images/fbicon.png"
-import Icon7 from "../assets/images/xboxicon.png"
+
+import Icon4 from "../assets/images/svg/twitter-svg.svg"
+import Icon5 from "../assets/images/svg/linkedin-svg.svg"
+import Icon6 from "../assets/images/svg/facebook-svg.svg"
 
 
 
@@ -81,9 +81,9 @@ export default function Footer() {
                             <a className='mx-2' href="https://www.facebook.com/alphavalley" target="_blank" rel="noopener noreferrer">
                                 <ImgLoader src={Icon6} width={20} height={20} alt="icon" />
                             </a>
-                            <a className='mx-2' href="/" target="_blank" rel="noopener noreferrer">
+                            {/* <a className='mx-2' href="/" target="_blank" rel="noopener noreferrer">
                                 <ImgLoader src={Icon7} width={20} height={20} alt="icon" />
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>

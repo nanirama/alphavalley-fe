@@ -12,7 +12,9 @@ export default function Pricing({data}) {
         <Layout>
             <Seo seo={MetaData[0]}/>
             <Pricingsection />
+            <div className='pitch-deck'>
             <FAQsection data={faqs.data} />
+            </div>
             <Alumnussection />
         </Layout>
     )

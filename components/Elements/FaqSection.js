@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ImgLoader from '../Image'
+import CTABtn from './CTABtn';
 
 
 import Accordion from 'react-bootstrap/Accordion';
@@ -35,7 +36,7 @@ export default function FAQsection({ data }) {
                 <div className="faq-bottom">
                     <h2>Still have questions?</h2>
                     <p>Can’t find the answer you’re looking for? Please get in touch </p>
-                    <Link href="/contact"><a className="btn">Contact us</a></Link>
+                    <CTABtn/>
                 </div>
             </div>
         </div>

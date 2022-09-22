@@ -3,13 +3,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import ImgLoader from '../../components/Image'
 
-import Brandimg1 from "../../assets/images/brand6.png"
-import Brandimg2 from "../../assets/images/brand3.png"
-import Brandimg3 from "../../assets/images/brand8.png"
-import Brandimg4 from "../../assets/images/brand7.png"
-import Brandimg5 from "../../assets/images/brand5.png"
-import Brandimg6 from "../../assets/images/brand9.png"
-
+import Icon1 from "../../assets/images/svg/clients-01.svg"
+import Icon2 from "../../assets/images/svg/clients-02.svg"
+import Icon3 from "../../assets/images/svg/clients-03.svg"
+import Icon4 from "../../assets/images/svg/clients-04.svg"
+import Icon5 from "../../assets/images/svg/clients-05.svg"
+import Icon6 from "../../assets/images/svg/clients-06.svg"
 
 
 
@@ -18,13 +17,13 @@ export default function Alumnussection() {
         <div className="alumnus-section">
             <div className="container">
                 <p>Join 4,000+ companies already growing</p>
-                <div className="image-list">
-                    <ImgLoader src={Brandimg1} width={120} height={40} alt="brand" />
-                    <ImgLoader src={Brandimg2} width={120} height={40} alt="brand" />
-                    <ImgLoader src={Brandimg6} width={120} height={40} alt="brand" />
-                    <ImgLoader src={Brandimg4} width={120} height={40} alt="brand" />
-                    <ImgLoader src={Brandimg5} width={120} height={40} alt="brand" />
-                    <ImgLoader src={Brandimg3} width={120} height={40} alt="brand" />
+                <div className="image-list pt-4">
+                    <ImgLoader src={Icon1} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon2} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon5} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon3} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon4} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon6} width={120} height={40} alt="brand" />
                 </div>
             </div>
         </div>

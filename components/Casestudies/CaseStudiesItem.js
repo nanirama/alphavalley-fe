@@ -16,13 +16,11 @@ export default function CaseStudiesItem({ data }) {
         const bannerImage = banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.url ? banner.data[0].attributes.url : CasestudyImg1
         return (
             <div className="col-lg-6 col-md-12 col-sm-12 col-12 my-3">
-
                 <div className="casestudyitem row my-3">
                     <div className="blog-img col-sm-6">
                         <Link href={`/casestudy/${slug}`}>
                             <a><ImgLoader src={bannerImage} width={320} height={200} alt="blog" className="w-100" /></a></Link>
                     </div>
-
                     <div className="content col-sm-6">
                         <span>{Clientname && Clientname} • <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></span>
                         <h4 className='ttl-minhght'><Link href={`/casestudy/${slug}`}>

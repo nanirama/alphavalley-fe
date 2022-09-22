@@ -13,7 +13,7 @@ export default function StatSection() {
                     <div className="heading">
                         <span className="title">WHY ALPHAVALLEY?</span>
                         <h1>We’re committed to delivering value to SMBs and startups</h1>
-                        <span className="s-text">We don’t have </span>
+                        <span className="s-text">We have </span>
                     </div>
                     <div className="row">
                         <div className="col-lg-6 col-md-12">

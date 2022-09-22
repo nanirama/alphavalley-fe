@@ -672,7 +672,7 @@ textarea {
     padding: 10px 14px
 }
 
-.pricing .button-group .btn-box button.is-active {
+.pricing .button-group .btn-box button.active {
     background: #fff;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(16, 24, 40, .1), 0 1px 2px rgba(16, 24, 40, .06)
@@ -748,7 +748,7 @@ textarea {
 .pricing .price-table .buy-button {
     margin: 12px 20px
 }
-
+.pricing .price-table .buy-button .btn,
 .pricing .price-table .buy-button button {
     border: 1px solid #d0d5dd;
     border-radius: 8px;
@@ -760,7 +760,7 @@ textarea {
     padding: 10px 20px;
     width: 100%
 }
-
+.pricing .price-table .buy-button .btn,
 .pricing .price-table .buy-button button.blue {
     background: #444ce7;
     border: 1px solid #444ce7;
@@ -2725,7 +2725,8 @@ a.page-link {
     color: #444ce7
 }
 
-.home .header-section button {
+.home .header-section button,
+.home .header-section .btn{
     background: #444ce7;
     border: 1px solid #444ce7;
     border-radius: 6px;
@@ -2910,9 +2911,8 @@ border:2px solid green;
 }
 
 .home .case-study-section .card .heading {
-    align-items: center;
+  
     display: flex;
-    justify-content: space-between;
     margin: 16px 0
 }
 
@@ -3033,8 +3033,8 @@ border:2px solid green;
 }
 
 .home .service-section .contents .content img {
-    height:48px !important; 
-    width: 48px !important;
+    height:24px !important; 
+    width:24px !important;
     margin:0 !important;
     min-width: inherit !important;
 }
@@ -3055,7 +3055,8 @@ border:2px solid green;
     margin-bottom: 32px
 }
 
-.home .service-section .contents .content button {
+.home .service-section .contents .content button,
+.home .service-section .contents .content .btn {
     background: #444ce7;
     border: 1px solid #444ce7;
     border-radius: 8px;
@@ -4019,8 +4020,8 @@ border:2px solid green;
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    margin: 94px 0;
-    width: 50%
+    /* margin: 94px 0;
+    width: 50% */
 }
 
 .home-usa .pitch-deck-section .content .content-box {
@@ -4297,9 +4298,9 @@ border:2px solid green;
     margin-top: 0px !important;
 }
 .home-usa .case-study-section .card .heading {
-    align-items: center;
+  
     display: flex;
-    justify-content: space-between;
+   
     margin: 16px 0
 }
 
@@ -4620,6 +4621,7 @@ border:2px solid green;
     background-repeat: no-repeat !important;
     position:absolute;
     right:0;
+
 }
 
 .accordion-collapse {
@@ -5508,6 +5510,7 @@ color:#000 !important;
     box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 2px 0 hsla(0, 0%, 100%, .25)
 }
 
+.header .btn,
 .header button,
 .header button:active,
 .header button:hover {
@@ -5525,7 +5528,8 @@ color:#000 !important;
     outline: none;
     padding: 8px 20px
 }
-
+.header .btn:focus,
+.header .btn:hover,
 .header button:focus,
 .header button:hover {
     box-shadow: none;
@@ -6022,13 +6026,26 @@ height: 60px;
   -o-border-radius: 6px;
   color: white;
 }
-.pitch-deck .home .other-service-section .image {
-  top: 300px;
-  background-color: none;
-  border-bottom-left-radius: 24px;
-  border-top-left-radius: 24px;
-  padding: 56px 0 56px 46px;
-  position: absolute;
+@media (min-width: 991px)  {
+    .pitch-deck .other-service-section .image {
+        top: 300px;
+        background-color: none;
+        border-bottom-left-radius: 24px;
+        border-top-left-radius: 24px;
+        padding: 56px 0 56px 46px;
+        position: absolute;
+      }
+      .our-section .content-box{
+        padding-right:1rem;
+      }
+}
+@media (max-width: 991px)  {
+    .pitch-deck .other-service-section .image {
+        background-color: none;
+        border-bottom-left-radius: 24px;
+        border-top-left-radius: 24px;
+        padding: 56px 0px;
+      }
 }
 .pitch-deck .home .other-service-section .image-content {
   margin-top: 80px;
@@ -6539,7 +6556,8 @@ height: 60px;
   color: #667085;
   margin-bottom: 48px;
 }
-.pitch-deck .header-section .content-box button {
+.pitch-deck .header-section .content-box button,
+.pitch-deck .header-section .content-box .btn {
   padding: 10px 20px;
   background: #444ce7;
   border: 1px solid #444ce7;
@@ -6919,6 +6937,7 @@ height: 60px;
   }
   .pitch-deck .header-section .header-box .image-box {
     width: 100%;
+    margin-bottom:20px;
   }
   .pitch-deck .header-section .banner-image {
     height: 250px;
@@ -6935,7 +6954,8 @@ height: 60px;
     line-height: 28px;
     margin-bottom: 32px;
   }
-  .pitch-deck .header-section .content-box button {
+  .pitch-deck .header-section .content-box button,
+  .pitch-deck .header-section .content-box .btn {
     width: 100%;
   }
   .pitch-deck .home-in .faq .faq-bottom {
@@ -7170,15 +7190,32 @@ height: 60px;
     background: #f2f4f7;
     
 }
-
+@media (max-width: 600px)  {
+    .hometestmnl{
+        padding:0px 8px;
+    }
+    .hometestmnl h3{
+        padding:0px 1.3rem;
+    }
+}
 .hometestmnl .slick-prev:before, .hometestmnl .slick-next:before {
 color:#000;
 }
-.hometestmnl .slick-prev {
+.hometestmnl .slick-prev:before, .hometestmnl .slick-next:before {
+    color:#000;
+    font-size: 0 !important;
+    content:'';
+  position: absolute;
+    background: url('data:image/svg+xml;utf8, <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/></svg>'); 
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 20px;
     left: -100px;
+    font-size: 0 !important;
 }
-.hometestmnl .slick-next {
-    right:-100px;
+.hometestmnl .slick-next:before {
+    right:-100px;left: inherit; transform: rotate(180deg);
 }
 
 .hometestmnl .testcompanies {
@@ -7244,19 +7281,20 @@ color:#000;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url(../assets/images/prev-arw.png);
+    background-image: url(../assets/images/svg/prev-arw.svg);
     background-position: center center;
     background-repeat: no-repeat;
 }
 .case-studyslide .slick-arrow.slick-prev:before, .case-studyslide .slick-arrow.slick-next:before {
     color:#000;
     font-size: 0 !important;
+    content:'';
+    position: inherit;
 }
 
 
 .case-studyslide .slick-arrow.slick-next {
     left: 60px !important;
-    border: 2px solid yellow;
     color: #000;
     font-size: 0 !important;
     background-color: #fff;
@@ -7264,9 +7302,13 @@ color:#000;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url(../assets/images/next-arw.png);
+    background-image: url(../assets/images/svg/next-arw.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    content: '';
+}
+.case-studyslide .slick-arrow.slick-next:before {
+    content: '';
 }
 
 .casestudyitem .content span {
@@ -7438,7 +7480,8 @@ width: 60px;}
     color: #fff;
     padding: 10px 20px;
 }
-.faq-bottom .btn {
+.faq-bottom .btn,
+.case-study-section .btn {
     background: #444ce7;
     border: 1px solid #444ce7;
     border-radius: 8px;
@@ -7452,13 +7495,21 @@ width: 60px;}
     margin: 15px 50px 15px 0;
     width: 120px;
 }
-
+@media (min-width: 991px)  {
 .home .other-service-section .image {
     border-bottom-left-radius: 24px;
     border-top-left-radius: 24px;
     padding: 56px 0 56px 46px;
     position: absolute;
 }
+}
+@media (max-width: 991px)  {
+    .home .other-service-section .image {
+        border-bottom-left-radius: 24px;
+        border-top-left-radius: 24px;
+        padding: 26px 0px 6px 0px;
+    }
+    }
 
 @media (max-width: 991px)  {
     .home .other-service-section
@@ -7467,8 +7518,8 @@ width: 60px;}
     }
 }
 
+
 .pitch-deck img.banner-image {
-border: 2px solid red;
 }
 
 @media (max-width:991px)
@@ -7520,4 +7571,45 @@ border: 2px solid red;
     .home-usa .case-study-section .card {
         width: 90%;
     }
+}
+
+.casestdyarw {
+    width:24px;
+    height: 24px;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.testimonial .slick-prev:before, .testimonial .slick-next:before {
+    color:#fff;
+    }
+    .testimonial .slick-prev:before, .testimonial .slick-next:before {
+        color:#fff;
+        font-size: 0 !important;
+        content:'';
+      position: absolute;
+        background: url('data:image/svg+xml;utf8, <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/></svg>'); 
+        background-position: left center;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 20px;
+        left: -100px;
+        font-size: 0 !important;
+    }
+    .testimonial .slick-next:before {
+        right:-100px;left: inherit; transform: rotate(180deg);
+    }
+
+    .navigation-menu { margin-left: auto;width: 100%;}
+
+.hamburger { border: 0; height: 40px;width: 40px !important;padding: 0.5rem; border-radius: 50%; background-color:transparent !important;
+cursor: pointer;  transition: background-color 0.2s ease-in-out; position: absolute; top: 50%; right: 5px;
+transform: translateY(-50%); display: none; padding: 6px 8px !important;border: 1px solid transparent !important;}
+
+.hamburger svg{ fill:#344054;}
+
+@media (max-width:991.98px) {
+.hamburger {display: block; }
+.navigation-menu .nav-menu {dipslay: none;}
+.navigation-menu.expanded .nav-menu {display: block;}
 }
