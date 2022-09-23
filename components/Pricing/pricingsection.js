@@ -210,7 +210,7 @@ export default function Pricingsection() {
                                         </div>
                                         <hr />
                                         <div className="content-box">
-                                            <h3>$1,290</h3>
+                                            <h3>{priceSec === 'US' ? '$1,290' : '₹1,01,910'}</h3>
                                             <p>Revamp your current deck.</p>
                                         </div>
                                         <div className="buy-button">
@@ -427,7 +427,7 @@ export default function Pricingsection() {
                                         </div>
                                         <hr />
                                         <div className="content-box">
-                                            <h3>$2,490</h3>
+                                            <h3>{priceSec === 'US' ? '$2,490' : '₹1,96,710'}</h3>
                                             <p>Build investor-ready deck from scratch.</p>
                                         </div>
                                         <div className="buy-button">
@@ -596,7 +596,7 @@ export default function Pricingsection() {
                                         </div>
                                         <hr />
                                         <div className="content-box">
-                                            <h3>$3,990</h3>
+                                            <h3>{priceSec === 'US' ? '$3,990' : '₹3,15,210'}</h3>
                                             <p>Build vc-grade deck for a startup with traction.</p>
                                         </div>
                                         <div className="buy-button">
