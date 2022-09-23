@@ -1,4 +1,4 @@
-import React, { useCallback, useState, Controller } from "react";
+import React, { useState } from "react";
 import Link from 'next/link'
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from 'react-google-recaptcha'
@@ -14,6 +14,7 @@ export default function Contactform() {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [errmessage, setErrMessage] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const countries = [ 
         {name: 'United States', code: 'US'}, 
@@ -296,6 +297,7 @@ export default function Contactform() {
           }
           else
           {
+            setIsSubmitting(true)
             const contactInfo = {
                 firstname: data.firstName,
                 lastname: data.lastName,
@@ -430,7 +432,7 @@ export default function Contactform() {
                                         </div>
                                         <div className="mt-1">
                                             <div className='d-flex flex-direction-row is-invalid px-2 block w-full shadow-sm text-warm-gray-900 border-red-500 border rounded-md'>
-                                                <select {...register("country-code")} className="border-0">
+                                                <select {...register("country_code")} className="border-0" name="country_code">
                                                     {countries.map((item,index)=>(
                                                         <option value={item.code} key={index}>{item.code}</option>
                                                     ))}
@@ -527,6 +529,7 @@ export default function Contactform() {
                                             type="submit"
                                             className="formsubmit"
                                             onClick={handleSubmit}
+                                            disabled={isSubmitting}
                                         >
                                             Send message
                                         </button>

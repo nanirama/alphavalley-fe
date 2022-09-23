@@ -29,15 +29,11 @@ export default function TestimonialsectionPitch({data}) {
     return (
         <>
             <div className="testimonial-section">
-                <div className="container">
+                <div className="container px-3">
                     <Slider {...settings}>
                         {data && data.map((item, index)=>{
                             const { Content, ClientName, publishedAt } = item.attributes
-                            //const TESTI_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/testimonies/${item.id}?populate=*`
-                            //const { data: testiData, error } = useSWR(TESTI_ENDPOINT, fetcher);
-                            //console.log('testiDatatestiData',testiData)
-                            //const AuthImage = testiData?.data?.attributes?.ClientImage?.data?.attributes?.url ? testiData?.data?.attributes?.ClientImage?.data?.attributes?.url : DefaultImg
-                            return(
+                        return(
                                 <div className="testimonial" key={index}>
                                     <h3 className="mt-2 mb-5 text-center text-white">{Content && Content}</h3>
                                     <div className="user-info">

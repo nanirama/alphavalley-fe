@@ -22,8 +22,8 @@ export default function Pricingsection() {
                         <div className="button-group">
                             <div className="buttons">
                                 <div className="btn-box">
-                                    <button className={priceSec === 'US' ? 'active' : 'inactive'} onClick={() => setPriceSec('US')}>Monthly billing</button>
-                                    <button className={priceSec === 'IND' ? 'active' : 'inactive'} onClick={() => setPriceSec('IND')}>Annual billing</button>
+                                    <button className={priceSec === 'US' ? 'active' : 'inactive'} onClick={() => setPriceSec('US')}>USA</button>
+                                    <button className={priceSec === 'IND' ? 'active' : 'inactive'} onClick={() => setPriceSec('IND')}>INDIA</button>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +49,7 @@ export default function Pricingsection() {
                                     </div>
                                 </div>
                                 <div className="bottom">
-                                    <div className="p-box">
+                                    {/* <div className="p-box">
                                         <div className="boxes">
                                             <div>
                                                 <p className="table-title">Pricing
@@ -57,8 +57,8 @@ export default function Pricingsection() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="p-box">
+                                    </div> */}
+                                    <div className="p-box firstone">
                                         <span>Content and Story</span>
                                         <div className="boxes">
                                             <div>
@@ -210,7 +210,7 @@ export default function Pricingsection() {
                                         </div>
                                         <hr />
                                         <div className="content-box">
-                                            <h1>$1,290 <span>per month</span></h1>
+                                            <h3>$1,290</h3>
                                             <p>Revamp your current deck.</p>
                                         </div>
                                         <div className="buy-button">
@@ -219,7 +219,7 @@ export default function Pricingsection() {
                                     </div>
                                 </div>
                                 <div className="bottom">
-                                    <div className="p-box">
+                                    {/* <div className="p-box">
                                         <div className="boxes">
                                             <div>
                                                 <p className="table-title">Pricing
@@ -228,7 +228,7 @@ export default function Pricingsection() {
                                                 <p className="table-value">$1,290</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="p-box">
                                         <span>Content and Story</span>
                                         <div className="boxes">
@@ -427,7 +427,7 @@ export default function Pricingsection() {
                                         </div>
                                         <hr />
                                         <div className="content-box">
-                                            <h1>$2,490 <span>per month</span></h1>
+                                            <h3>$2,490</h3>
                                             <p>Build investor-ready deck from scratch.</p>
                                         </div>
                                         <div className="buy-button">
@@ -436,14 +436,14 @@ export default function Pricingsection() {
                                     </div>
                                 </div>
                                 <div className="bottom">
-                                    <div className="p-box">
+                                    {/* <div className="p-box">
                                         <div className="boxes">
                                             <div>
                                                 <p className="table-title">Pricing &nbsp; <ImgLoader src={PricingQtn} width={16} height={16} alt="Help" /></p>
                                                 <p className="table-value">$2,490</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="p-box">
                                         <span>Content and Story</span>
                                         <div className="boxes">
@@ -596,7 +596,7 @@ export default function Pricingsection() {
                                         </div>
                                         <hr />
                                         <div className="content-box">
-                                            <h1>$3,990 <span>per month</span></h1>
+                                            <h3>$3,990</h3>
                                             <p>Build vc-grade deck for a startup with traction.</p>
                                         </div>
                                         <div className="buy-button">
@@ -605,7 +605,7 @@ export default function Pricingsection() {
                                     </div>
                                 </div>
                                 <div className="bottom">
-                                    <div className="p-box">
+                                    {/* <div className="p-box">
                                         <div className="boxes">
                                             <div>
                                                 <p className="table-title">Pricing
@@ -614,7 +614,7 @@ export default function Pricingsection() {
                                                 <p className="table-value">$3,990</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="p-box">
                                         <span>Content and Story</span>
                                         <div className="boxes">

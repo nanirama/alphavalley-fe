@@ -1,15 +1,11 @@
 import ImgLoader from '../Image'
 
-import Brandimg1 from "../../assets/images/brand1.jpg"
-import Brandimg2 from "../../assets/images/brand2.png"
-import Brandimg3 from "../../assets/images/brand3.png"
-
-import Brandimg4 from "../../assets/images/brand4.png"
-
-import Brandimg5 from "../../assets/images/brand6.png"
-
-import Brandimg6 from "../../assets/images/brand5.png"
-
+import Icon1 from "../../assets/images/svg/clients-01.svg"
+import Icon2 from "../../assets/images/svg/clients-02.svg"
+import Icon3 from "../../assets/images/svg/clients-03.svg"
+import Icon4 from "../../assets/images/svg/clients-04.svg"
+import Icon5 from "../../assets/images/svg/clients-05.svg"
+import Icon6 from "../../assets/images/svg/clients-06.svg"
 
 
 export default function Alumnussection() {
@@ -20,12 +16,12 @@ export default function Alumnussection() {
             <div className="container">
                 <p>Admired by alumnus of </p>
                 <div className="image-list">
-                <ImgLoader src={Brandimg1} width={120} height={50} alt="brand" />
-                <ImgLoader src={Brandimg2} width={150} height={70} alt="brand" />
-                <ImgLoader src={Brandimg3} width={120} height={50} alt="brand" />
-                <ImgLoader src={Brandimg4} width={120} height={50} alt="brand" />
-                <ImgLoader src={Brandimg5} width={120} height={50} alt="brand" />
-                <ImgLoader src={Brandimg6} width={120} height={80} alt="brand" />
+                    <ImgLoader src={Icon1} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon2} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon5} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon3} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon4} width={120} height={40} alt="brand" />
+                    <ImgLoader src={Icon6} width={120} height={40} alt="brand" />
                 </div>
             </div>
         </div>

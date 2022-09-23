@@ -22,7 +22,7 @@ export default function Pricingsection() {
                                     <span>Most popular!</span></div>
                                 <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-s18byi">
                                     <div className="main-content">
-                                        <h1>$490</h1>
+                                        <h3>$1,290</h3>
                                         <b>Seed</b>
                                         <p>Revamp your existing deck</p>
                                     </div>
@@ -54,7 +54,7 @@ export default function Pricingsection() {
                             <div className="pricing-box">
                                 <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-s18byi">
                                     <div className="main-content">
-                                        <h1>$890</h1>
+                                        <h3>$2,490</h3>
                                         <b>Sprout</b>
                                         <p>Investor-ready deck from scratch</p>
                                     </div>
@@ -86,7 +86,7 @@ export default function Pricingsection() {
                             <div className="pricing-box">
                                 <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-s18byi">
                                     <div className="main-content">
-                                        <h1>$1,290</h1>
+                                        <h3>$3,990</h3>
                                         <b>Sapling</b>
                                         <p>VC-grade deck for rowing startups</p>
                                     </div>
