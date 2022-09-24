@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import ImgLoader from '../../components/Image'
 import CTABtn from '../Elements/CTABtn'
 
-import PricingQtn from "../../assets/images/pricing-qtn.png"
-import PricingCheck from "../../assets/images/pricing-check.png"
+import PricingQtn from "../../assets/images/svg/pricing-qtn.svg"
+import PricingCheck from "../../assets/images/svg/pricing-check.svg"
 
 
 export default function Pricingsection() {

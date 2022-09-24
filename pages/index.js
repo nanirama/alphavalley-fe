@@ -9,6 +9,9 @@ import CTAsection1 from "../components/Elements/CTASection1"
 import CaseStudiessection from "../components/Elements/CaseStudies"
 import { fetchAPI } from "../lib/api";
 
+
+
+
 export default function Home({ data }) {
   const { MetaData, faqs, ClientName, case_studies  } = data.attributes
   return (
