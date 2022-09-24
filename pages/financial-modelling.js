@@ -15,7 +15,6 @@ import { fetchAPI } from "../lib/api";
 
     export default function FinancialModelling({data}) {
     const { MetaData, ClientName, faqs, case_studies } = data.attributes
-    console.log('data.attributes',ClientName.data)
     return (
         <Layout>
               <Seo seo={MetaData[0]}/>

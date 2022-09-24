@@ -285,7 +285,6 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
               }
             })
             .catch((err) => {
-              console.log(err)
               resolve(false)
             })
         })
@@ -300,7 +299,6 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
                 subject: subject,
                 country_code: data.country_code
             };
-            console.log(contactInfo); 
             
             const add = await fetch(
                 `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/contactus-lead`,

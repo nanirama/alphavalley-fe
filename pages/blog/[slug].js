@@ -1,17 +1,10 @@
-import Head from 'next/head'
-import ImgLoader from '../../components/Image'
-
-import CaseStudiessection from '../../components/Elements/CaseStudies'
-
 import Layout from "../../components/layout"
 import Seo from '../../components/seo'
 import BlogIndex from '../../components/Blog'
-
+import CaseStudiessection from '../../components/Elements/CaseStudies'
 import { fetchAPI } from "../../lib/api";
-import CasestudyImg1 from "../../assets/images/case-study1.png"
 export default function BlogSingle({article, casestudies}) {
     const { Metadata } = article.attributes
-    console.log('casestudies',casestudies)
     return (
         <Layout>
             <Seo seo={Metadata[0]}/>

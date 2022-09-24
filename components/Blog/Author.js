@@ -9,7 +9,6 @@ import DefaultImg from '../../assets/images/author-default.png'
 const Author = ({ author, publishedAt }) => {
     const USER_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/authors/${author.data.id}?populate=*`
     const { data: userData, error } = useSWR(USER_ENDPOINT, fetcher);
-    console.log('userData',userData)
     const avatarImage = userData && userData.data && userData.data.attributes.avatar && userData.data.attributes.avatar.data && userData.data.attributes.avatar.data.attributes && userData.data.attributes.avatar.data.attributes.url ? userData.data.attributes.avatar.data.attributes.url : DefaultImg
     return (
         <div className="user mt-4 d-flex flex-row align-items-center">

@@ -9,7 +9,6 @@ import InvestmentThesis from "../../assets/images/investment-thesis.jpg";
 
 export default function PitchDeckSection() {
     const [offeringImage, setOfferingImage] = useState(CompellingStory);
-    console.log('offeringImage',offeringImage)
     return (
         <div className="pitch-deck-section">
             <div className="container">
