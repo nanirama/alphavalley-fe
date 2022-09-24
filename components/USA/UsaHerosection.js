@@ -1,6 +1,7 @@
 import ImgLoader from '../Image'
 import LandingPageForm from './LandingPageForm'
 import CheckIcon from "../../assets/images/checkicon.png"
+import AVlogo from "../../assets/images/av-logo.png"
 export default function UsaHerosection() {
 
     return (
@@ -17,30 +18,27 @@ export default function UsaHerosection() {
                                     <p>Compelling story</p>
                                 </div>
                                 <div>
-                                <ImgLoader src={CheckIcon} width={32} height={32} alt="check" />
+                                    <ImgLoader src={CheckIcon} width={32} height={32} alt="check" />
                                     <p>Strong investment thesis</p>
                                 </div>
                                 <div>
-                                <ImgLoader src={CheckIcon} width={32} height={32} alt="check" />
+                                    <ImgLoader src={CheckIcon} width={32} height={32} alt="check" />
                                     <p>Stunning design</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-12 col-sm-12 col-12 form-box">
-                            <LandingPageForm subject="Usa Landing Page"/>
+                            <div className="outer-box">
+                                <div className="inner-box">
+                                    <ImgLoader src={AVlogo} width={32} height={32} alt="AVlogo" />
+                                    <h6>Book Free Consultation</h6>
+                                    <LandingPageForm subject="Pitch Deck Enquiry - USA" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-           
-           
-           
-           
-           
-           
-            
-           
-            </div>
+        </div>
     )
 }

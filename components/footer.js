@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ImgLoader from './Image'
 import Logo from "../assets/images/logoicon.png"
+import FooterLogo from "../assets/images/svg/footer-logo.svg"
 
 
 import Icon4 from "../assets/images/svg/twitter-svg.svg"
@@ -17,8 +18,20 @@ export default function Footer() {
                     <div className="row">
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                             <div className="description">
+                                {/* <div className="logo border-2">
+                                    <Link href="/">
+                                        <a>
+                                            <ImgLoader src={FooterLogo} width={175} height={100} alt="Logo" />
+                                        </a>
+                                    </Link>
+                                </div> */}
                                 <div className="logo">
-                                    <Link href="/"><a><ImgLoader src={Logo} width={32} height={32} alt="Logo" /></a></Link>
+
+                                    <Link href="/">
+                                        <a>
+                                            <ImgLoader src={Logo} width={32} height={32} alt="Logo" />
+                                        </a>
+                                    </Link>
 
                                     <Link href="/"><a><h5 className='mb-0'>AlphaValley</h5></a></Link>
                                 </div>
@@ -55,7 +68,7 @@ export default function Footer() {
                             <div className="footer-box">
                                 <Link href="/usa"><a><button>Pitch Deck USA</button></a></Link>
                                 <Link href="/uae"><a><button>Pitch Deck UAE</button></a></Link>
-                                <Link href="/"><a><button>Pitch Deck India</button></a></Link>
+                                <Link href="/in"><a><button>Pitch Deck India</button></a></Link>
                             </div>
                         </div>
                     </div>
@@ -81,9 +94,6 @@ export default function Footer() {
                             <a className='mx-2' href="https://www.facebook.com/alphavalley" target="_blank" rel="noopener noreferrer">
                                 <ImgLoader src={Icon6} width={20} height={20} alt="icon" />
                             </a>
-                            {/* <a className='mx-2' href="/" target="_blank" rel="noopener noreferrer">
-                                <ImgLoader src={Icon7} width={20} height={20} alt="icon" />
-                            </a> */}
                         </div>
                     </div>
                 </div>

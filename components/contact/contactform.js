@@ -11,7 +11,7 @@ export default function Contactform() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [subject, setSubject] = useState("");
+    // const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [errmessage, setErrMessage] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -303,7 +303,7 @@ export default function Contactform() {
                 lastname: data.lastName,
                 email: data.email,
                 phone: data.phone,
-                subject: data.subject,
+                subject: 'Pitch Deck Enquiry - Contact Us',
                 message: data.message,
                 country_code: data.country_code
             };
@@ -454,7 +454,7 @@ export default function Contactform() {
                                         </div>
                                     </div>
 
-                                    <div className='mt-3'>
+                                    {/* <div className='mt-3'>
                                         <label
                                             htmlFor="email"
                                             className="block text-sm font-medium text-warm-gray-900"
@@ -475,7 +475,7 @@ export default function Contactform() {
                                             />
                                             {errors.subject && <p className="error text-red-500">This field is required.</p>}
                                         </div>
-                                    </div>
+                                    </div> */}
 
                                     <div className="sm:col-span-2 mt-3">
                                         <div className="flex justify-between">

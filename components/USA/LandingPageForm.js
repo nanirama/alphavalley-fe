@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 
 import ImgLoader from '../Image'
-import AVlogo from "../../assets/images/av-logo.png"
+
 const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
 
     const [firstName, setFirstName] = useState("");
@@ -319,10 +319,7 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
         
     }
     return (
-        <div className="outer-box">
-            <div className="inner-box">
-                <ImgLoader src={AVlogo} width={32} height={32} alt="AVlogo" />
-                <h6>Book Free Consultation</h6>
+
                 <form onSubmit={handleSubmit(onSubmit)}
                         action="#"
                         method="POST"
@@ -412,9 +409,6 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
                         <button className="btn" type="submit" disabled={isSubmitting}>Book Now</button>
                     </div>
                 </form>
-
-            </div>
-        </div>
     )
 }
 
