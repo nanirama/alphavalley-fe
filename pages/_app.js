@@ -4,10 +4,10 @@ import Head from "next/head";
 import 'bootstrap/dist/css/bootstrap.css'
 export const GlobalContext = createContext({});
 import '../styles/globals.css'
-import '../styles/home.css'
-import '../styles/pricing.css'
-import '../styles/pitch-deck.css'
-import '../styles/usa.css'
+// import '../styles/home.css'
+// import '../styles/pricing.css'
+// import '../styles/pitch-deck.css'
+// import '../styles/usa.css'
 
 function MyApp({ Component, pageProps }) {
   return (
