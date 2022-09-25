@@ -22,10 +22,6 @@ const CaseStudiessection = dynamic(() => import('../components/Elements/CaseStud
 // import CaseStudiessection from "../components/Elements/CaseStudies"
 import { fetchAPI } from "../lib/api";
 
-export const config = {
-  unstable_runtimeJS: false
-}
-
 
 
 
