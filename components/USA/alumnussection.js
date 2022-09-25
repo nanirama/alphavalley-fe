@@ -15,7 +15,7 @@ export default function Alumnussection() {
         <div className="alumnus-section">
             <div className="container">
                 <p>Admired by alumnus of </p>
-                <div className="image-list pt-4">
+                <div className="image-list">
                     <ImgLoader src={Icon1} width={120} height={40} alt="brand" />
                     <ImgLoader src={Icon2} width={120} height={40} alt="brand" />
                     <ImgLoader src={Icon5} width={120} height={40} alt="brand" />

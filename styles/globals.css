@@ -212,7 +212,7 @@ textarea {
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .contact-us .contact-us-form .form-box .form-group input {
@@ -227,7 +227,7 @@ textarea {
     color: #101828;
     font-size: 16px;
     line-height: 24px;
-    padding: 8px 14px;
+    padding: 8px 14px
 }
 
 .contact-us .contact-us-form .form-box .form-check,
@@ -4612,6 +4612,7 @@ border:2px solid green;
     margin-right: 0px;
     background: #f2f4f7;
 }
+
 .accordion-item
 {
     border:0;
@@ -4634,7 +4635,7 @@ border:2px solid green;
     height: 26px !important;
     margin-left: 10px !important;
     content: "" !important;
-    background-image: url(../assets/images/svg/plus-icon.svg) !important;
+    background-image: url(../assets/images/plus-icon.png) !important;
     background-repeat: no-repeat !important;
     position:absolute;
     right:0;
@@ -4664,7 +4665,7 @@ border:2px solid green;
     height: 26px !important;
     margin-left: 10px !important;
     content: "" !important;
-    background-image: url(../assets/images/svg/minus-icon.svg) !important;
+    background-image: url(../assets/images/minus-icon.png) !important;
     background-repeat: no-repeat !important;
     transform: rotate(180deg);
     transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -5264,7 +5265,11 @@ color:#000 !important;
         max-width: 1250px
     }
 }
-
+.footer .logo{
+    padding:0px;
+    height:50px;
+    overflow: hidden;
+}
 @media (min-width:1400px) {
     .home-usa .case-study-section .case-study {
         max-width: 1500px
@@ -7554,7 +7559,6 @@ width: 60px;}
 @media (max-width:991px) {
     .testimonial-section .slick-prev {
         left:0px;
-        z-index: 99;
     }
 }
 @media (max-width:991px) {
@@ -7683,24 +7687,13 @@ transform: translateY(-50%); display: none; padding: 6px 8px !important;border: 
         padding:40px 0 !important;
     }
 }
-
 @media (max-width:767.98px) {
     .home .service-section .contents {
         margin-top: 40px ;
     }
 }
+
 .header-section .form-group {
 margin:15px 0;
 }
-.pitchform-ttl h6 {
-    color: #101828;
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 38px;
-    margin: 10px 0;
-}
-.form-group label {
-padding-bottom: 5px;
-}
-.form-group input {
-}
+

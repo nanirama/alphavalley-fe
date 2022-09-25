@@ -7,20 +7,13 @@ import ImgLoader from './Image'
 import CTABtn from './Elements/CTABtn'
 
 import Logo from "../assets/images/logo.png"
+import LogoSvg from "../assets/images/svg/logo.svg"
+import Icon1 from "../assets/images/menuicon1.png"
+import Icon2 from "../assets/images/menuicon2.png"
+import Icon3 from "../assets/images/menuicon3.png"
 import Arrow from "../assets/images/arrow.png"
 
-import MenuIcon1 from "../assets/images/svg/investorpitchdeck.svg"
-import MenuIcon2 from "../assets/images/svg/financialmodelling.svg"
-import MenuIcon3 from "../assets/images/svg/pitchdeckdesign.svg"
-import MenuIcon4 from "../assets/images/svg/businessplan.svg"
-import MenuIcon5 from "../assets/images/svg/businessvaluation.svg"
-import MenuIcon6 from "../assets/images/svg/investorconnect.svg"
-import MenuIcon7 from "../assets/images/svg/aboutus.svg"
-import MenuIcon8 from "../assets/images/svg/blog.svg"
-import MenuIcon9 from "../assets/images/svg/guides.svg"
-import MenuIcon10 from "../assets/images/svg/casestudies.svg"
-import MenuIcon11 from "../assets/images/svg/termsofengagement.svg"
-import MenuIcon12 from "../assets/images/svg/faq.svg"
+
 
 export default function Header() {
    const [toggle, setToggle] = useState(false);
@@ -40,8 +33,15 @@ export default function Header() {
          <div className="header">
             <div className="container">
                <div className="navigation position-relative">
+                  {/* <div className="logo">
+                     <Link href="/"><a>
+                        <ImgLoader src={LogoSvg} width={250} height={78} alt="Logo" />
+                     </a></Link>
+                  </div> */}
                   <div className="logo">
-                     <Link href="/"><a><ImgLoader src={Logo} width={146} height={38} alt="Logo" /></a></Link>
+                     <Link href="/"><a>
+                        <ImgLoader src={Logo} width={146} height={38} alt="Logo" />
+                     </a></Link>
                   </div>
 
                   <div className={`nav-menu ${toggle ? "open" : ""}`}>
@@ -64,7 +64,7 @@ export default function Header() {
                                  <div className="row">
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <div className="sections">
-                                          <ImgLoader src={MenuIcon1} width={22} height={22} alt="icon" />
+                                          <ImgLoader src={Icon1} width={22} height={22} alt="icon" />
                                           <div className="section-content">
                                              <Link href="/pitch-deck"><a><h6>Investor Pitch Deck</h6>
                                                 <p>Analyze conversion rates and improve your sales.</p></a></Link>
@@ -73,7 +73,7 @@ export default function Header() {
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <div className="sections">
-                                          <ImgLoader src={MenuIcon2} width={30} height={22} alt="icon" />
+                                          <ImgLoader src={Icon2} width={22} height={22} alt="icon" />
                                           <div className="section-content">
                                              <Link href="/financial-modelling"><a><h6>Financial Modelling</h6>
                                                 <p>Measure active usage and target areas of improvement.</p>
@@ -84,7 +84,7 @@ export default function Header() {
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <div className="sections">
-                                          <ImgLoader src={MenuIcon3} width={22} height={22} alt="icon" />
+                                          <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
                                              <Link href="/pitch-deck-design"><a><h6>Pitch Deck Design</h6>
                                                 <p>Find retention drivers and make your customers smile.</p></a></Link>
@@ -93,7 +93,7 @@ export default function Header() {
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <div className="sections">
-                                          <ImgLoader src={MenuIcon4} width={22} height={22} alt="icon" />
+                                          <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
                                              <h6>Business Plan <span>Coming soon!</span></h6>
                                              <p>Find retention drivers and make your customers smile.</p>
@@ -102,7 +102,7 @@ export default function Header() {
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <div className="sections">
-                                          <ImgLoader src={MenuIcon5} width={22} height={22} alt="icon" />
+                                          <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
                                              <h6>Business Valuation <span>Coming soon!</span></h6>
                                              <p>Find retention drivers and make your customers smile.</p>
@@ -111,7 +111,7 @@ export default function Header() {
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <div className="sections">
-                                          <ImgLoader src={MenuIcon6} width={22} height={22} alt="icon" />
+                                          <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
                                              <h6>Investor Connect <span>Coming soon!</span></h6>
                                              <p>Find retention drivers and make your customers smile.</p>
@@ -140,7 +140,7 @@ export default function Header() {
                                  <div className="row">
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <div className="sections">
-                                          <ImgLoader src={MenuIcon7} width={22} height={22} alt="icon" />
+                                          <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
                                              <Link href="/"><a><h6>About Us</h6>
                                                 <p>Find retention drivers and make your customers smile.</p></a></Link>
@@ -149,7 +149,7 @@ export default function Header() {
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <div className="sections">
-                                          <ImgLoader src={MenuIcon8} width={22} height={22} alt="icon" />
+                                          <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                           <div className="section-content">
                                              <Link href="/blog"><a><h6>Blog</h6>
                                                 <p>Find retention drivers and make your customers smile.</p></a></Link>
@@ -159,7 +159,7 @@ export default function Header() {
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <Link href="/"><a>
                                           <div className="sections">
-                                             <ImgLoader src={MenuIcon9} width={22} height={22} alt="icon" />
+                                             <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                              <div className="section-content">
                                                 <h6>Guides <span>Coming soon!</span></h6>
                                                 <p>Find retention drivers and make your customers smile.</p>
@@ -170,7 +170,7 @@ export default function Header() {
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <Link href="/casestudy/"><a>
                                           <div className="sections">
-                                             <ImgLoader src={MenuIcon10} width={22} height={22} alt="icon" />
+                                             <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                              <div className="section-content">
                                                 <h6>Case Studies</h6>
                                                 <p>Find retention drivers and make your customers smile.</p>
@@ -181,7 +181,7 @@ export default function Header() {
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <Link href="/term-condition"><a>
                                           <div className="sections">
-                                             <ImgLoader src={MenuIcon11} width={22} height={22} alt="icon" />
+                                             <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                              <div className="section-content">
                                                 <h6>Terms of Engagement</h6>
                                                 <p>Find retention drivers and make your customers smile.</p>
@@ -193,7 +193,7 @@ export default function Header() {
                                     <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                                        <Link href="/faq"><a>
                                           <div className="sections">
-                                             <ImgLoader src={MenuIcon12} width={22} height={22} alt="icon" />
+                                             <ImgLoader src={Icon3} width={22} height={22} alt="icon" />
                                              <div className="section-content">
                                                 <h6>FAQs</h6>
                                                 <p>Find retention drivers and make your customers smile.</p>

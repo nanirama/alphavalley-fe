@@ -58,7 +58,7 @@ export default function CaseStudiessection({ data }) {
                 <div className="row">
                   <div className="col-md-6 col-sm-12 d-flex justify-content-md-start">
                     <div className="heading">
-                        <h1>View All Case Studies</h1>
+                        <h1>Case Studies</h1>
                         <p>Select case studies of our contribution to the startup ecosystem.</p>
                     </div>
                   </div>
