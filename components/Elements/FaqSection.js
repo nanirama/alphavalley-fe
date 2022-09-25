@@ -5,7 +5,7 @@ import CTABtn from './CTABtn';
 
 import Accordion from 'react-bootstrap/Accordion';
 
-export default function FAQsection({ data }) {
+export default function FAQsection({ data, title="Commonly asked questions about our pitch deck and other services" }) {
 
     return (
         <div className="faq">
@@ -13,7 +13,7 @@ export default function FAQsection({ data }) {
                 <div className="faq-top">
                     <div className="faq-header">
                         <h1>Frequently asked questions</h1>
-                        <p>Commonly asked questions about our pitch deck and other services</p>
+                        <p>{title}</p>
                     </div>
 
                     <div className='faqsection'>

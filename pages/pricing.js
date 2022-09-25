@@ -2,7 +2,7 @@ import Layout from "../components/layout"
 import Seo from '../components/seo'
 import Pricingsection from '../components/Pricing/pricingsection'
 import FAQsection from '../components/Elements/FaqSection'
-import Alumnussection from '../components/Pricing/alumnussection'
+import Alumnussection from '../components/Elements/alumnussection'
 import { fetchAPI } from "../lib/api";
 
 

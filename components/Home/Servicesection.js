@@ -12,9 +12,6 @@ import Icon3 from "../../assets/images/svg/service-3.svg"
 
 import Dots from "../../assets/images/lineimg.png"
 
-
-
-
 export default function Servicesection() {
    return (
       <div className='service-section'>

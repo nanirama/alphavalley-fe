@@ -10,7 +10,6 @@ import CasestudyImg1 from "../../assets/images/case-study1.png"
 export default function CaseStudiesItem({ data }) {
     const POST_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/case-studies/${data.id}?populate=*`
     const { data: postData, error } = useSWR(POST_ENDPOINT, fetcher);
-    console.log('postDatapostData', postData)
     if (postData) {
         const { title, slug, excrept, publishedAt, Clientname, tags, banner } = postData.data.attributes
         const bannerImage = banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.url ? banner.data[0].attributes.url : CasestudyImg1

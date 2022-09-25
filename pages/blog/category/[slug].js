@@ -5,7 +5,6 @@ import LookingSection from '../../../components/Blog/LookingSection'
 import { fetchAPI } from "../../../lib/api";
 
 export default function BlogPage({ category, categories }) {
-  console.log('data',category)
     return (
         <Layout>
             <div className="blogs">

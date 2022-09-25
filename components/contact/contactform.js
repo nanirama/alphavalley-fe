@@ -11,7 +11,7 @@ export default function Contactform() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [subject, setSubject] = useState("");
+    // const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [errmessage, setErrMessage] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -268,29 +268,6 @@ export default function Contactform() {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-    const validateCaptcha = (response_key) => {
-        return new Promise((resolve, reject) => {
-          const secret_key = '6LeeNQ4iAAAAANgHJxIcT2dqDPDKHoPyi0sW2cLI'
-      
-          const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${response_key}`
-      
-          fetch(url, {
-            method: 'post'
-          })
-            .then((response) => response.json())
-            .then((google_response) => {
-              if (google_response.success == true) {
-                resolve(true)
-              } else {
-                resolve(false)
-              }
-            })
-            .catch((err) => {
-              console.log(err)
-              resolve(false)
-            })
-        })
-      }
     const onSubmit = async(data)=>{
         if (grecaptcha.getResponse() === '') {
             setErrMessage('Please Click on Recaptcha')
@@ -303,11 +280,10 @@ export default function Contactform() {
                 lastname: data.lastName,
                 email: data.email,
                 phone: data.phone,
-                subject: data.subject,
+                subject: 'Pitch Deck Enquiry - Contact Us',
                 message: data.message,
                 country_code: data.country_code
             };
-            console.log(contactInfo); 
             
             const add = await fetch(
                 `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/contactus-lead`,
@@ -320,7 +296,6 @@ export default function Contactform() {
                 }
             );
             const addResponse = await add.text();
-            console.log(addResponse);
             if(addResponse){
                 router.push('/thankyou')
             }
@@ -454,7 +429,7 @@ export default function Contactform() {
                                         </div>
                                     </div>
 
-                                    <div className='mt-3'>
+                                    {/* <div className='mt-3'>
                                         <label
                                             htmlFor="email"
                                             className="block text-sm font-medium text-warm-gray-900"
@@ -475,7 +450,7 @@ export default function Contactform() {
                                             />
                                             {errors.subject && <p className="error text-red-500">This field is required.</p>}
                                         </div>
-                                    </div>
+                                    </div> */}
 
                                     <div className="sm:col-span-2 mt-3">
                                         <div className="flex justify-between">
