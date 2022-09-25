@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['res.cloudinary.com','images.unsplash.com'],
-    formats: ['image/avif', 'image/webp']
+    formats: ['image/webp']
   },  
 }
 
