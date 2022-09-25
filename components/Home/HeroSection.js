@@ -2,6 +2,7 @@ import ImgLoader from '../Image'
 import CTABtn from '../Elements/CTABtn'
 
 import Homehero from "../../assets/images/home-hero.jpg"
+import HomeheroSmall from "../../assets/images/home-hero-small.jpg"
 
 import Icon1 from "../../assets/images/svg/clients-01.svg"
 import Icon2 from "../../assets/images/svg/clients-02.svg"
@@ -35,7 +36,10 @@ export default function HeroSection() {
                <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                   <div className="image hero-img">
                      <div className="">
-                        <ImgLoader src={Homehero} width={720} height={586} alt="" />
+                        <ImgLoader src={Homehero} width={720} height={586} alt=""
+                           blurDataURL={HomeheroSmall}
+                           placeholder="blur"
+                        />
                      </div>
                   </div>
                </div>
