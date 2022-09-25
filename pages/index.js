@@ -1,12 +1,25 @@
-import Seo from '../components/seo'
-import Layout from "../components/layout"
-import HeroSection from "../components/Home/HeroSection"
-import Servicesection from "../components/Home/Servicesection"
-import StatSection from "../components/Elements/StatSection"
-import Testimonialsection from "../components/Elements/Testimonialsection"
-import OtherSevicesection from "../components/Home/OtherSevicesection"
-import CTAsection1 from "../components/Elements/CTASection1"
-import CaseStudiessection from "../components/Elements/CaseStudies"
+import dynamic from 'next/dynamic'
+
+const Seo = dynamic(() => import('../components/seo'))
+const Layout = dynamic(() => import('../components/layout'))
+const HeroSection = dynamic(() => import('../components/Home/HeroSection'))
+const Servicesection = dynamic(() => import('../components/Home/Servicesection'))
+const StatSection = dynamic(() => import('../components/Elements/StatSection'))
+const Testimonialsection = dynamic(() => import('../components/Elements/Testimonialsection'))
+const OtherSevicesection = dynamic(() => import('../components/Home/OtherSevicesection'))
+const CTAsection1 = dynamic(() => import('../components/Elements/CTASection1'))
+const CaseStudiessection = dynamic(() => import('../components/Elements/CaseStudies'))
+
+
+
+// import Layout from "../components/layout"
+// import HeroSection from "../components/Home/HeroSection"
+// import Servicesection from "../components/Home/Servicesection"
+// import StatSection from "../components/Elements/StatSection"
+// import Testimonialsection from "../components/Elements/Testimonialsection"
+// import OtherSevicesection from "../components/Home/OtherSevicesection"
+// import CTAsection1 from "../components/Elements/CTASection1"
+// import CaseStudiessection from "../components/Elements/CaseStudies"
 import { fetchAPI } from "../lib/api";
 
 
