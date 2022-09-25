@@ -147,7 +147,7 @@ const Index = ({data})=>{
                         </div>
                         <div className="image d-flex justify-content-center align-items-center bottom-0 top-0">
                             <div className='blog-image position-relative'>
-                            <ImgLoader src={coverImage} width={covers?.data?.attributes?.formats?.large?.width ? covers.data.attributes.formats.large.width : '600px'} height={covers?.data?.attributes?.formats?.large?.height ? covers.data.attributes.formats.large.height : '400px'} alt="blog" className="w-100" />
+                               <ImgLoader src={coverImage} width={covers?.data?.attributes?.formats?.large?.width} height={covers?.data?.attributes?.formats?.large?.height} alt="blog" className="w-100" />
                                <div className='arrow'>
                                 <ImgLoader src={Blog1bg} width={299} height={148} alt="blog" className="arrow" />
                             </div>

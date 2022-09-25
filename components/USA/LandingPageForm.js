@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 
 import ImgLoader from '../Image'
-
+import AVlogo from "../../assets/images/av-logo.png"
 const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
 
     const [firstName, setFirstName] = useState("");
@@ -285,6 +285,7 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
               }
             })
             .catch((err) => {
+              console.log(err)
               resolve(false)
             })
         })
@@ -299,6 +300,7 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
                 subject: subject,
                 country_code: data.country_code
             };
+            console.log(contactInfo); 
             
             const add = await fetch(
                 `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/contactus-lead`,
@@ -317,7 +319,10 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
         
     }
     return (
-
+        <div className="outer-box">
+            <div className="inner-box">
+                <ImgLoader src={AVlogo} width={32} height={32} alt="AVlogo" />
+                <h6>Book Free Consultation</h6>
                 <form onSubmit={handleSubmit(onSubmit)}
                         action="#"
                         method="POST"
@@ -407,6 +412,9 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
                         <button className="btn" type="submit" disabled={isSubmitting}>Book Now</button>
                     </div>
                 </form>
+
+            </div>
+        </div>
     )
 }
 

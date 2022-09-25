@@ -28,7 +28,7 @@ export default function PitchdeckDesign({data}) {
                 <Alumnussection />
                 <TestimonialsectionPitch data={ClientName.data} />
                 <Worksection />
-                <FAQsection data={faqs.data} title="Things you need to know before taking our pitch deck design service" />
+                <FAQsection data={faqs.data} />
                 </div>
         </Layout>
     )

@@ -5,6 +5,7 @@ import CaseStudiesIndex from "../../../components/Casestudies/CaseStudiesIndex";
 import { fetchAPI } from "../../../lib/api";
 
 export default function TagSingle({ data }) {
+  console.log('datadata', data)
   const { Metadata } = data.attributes
   return (
     <Layout>

@@ -4,7 +4,6 @@ import Share from "./Share";
 import Blog1bg from "../../assets/images/blog1-bg.png"
 import parse from "html-react-parser";
 
-import CasestudyImg1 from  "../../assets/images/case-study1.png"
 const Index = ({ data }) => {
     const {
         title,
@@ -18,6 +17,7 @@ const Index = ({ data }) => {
     const stwitterHandle = "_MsLinda";
     const stitle = `Read ${title} `;
     const surl = "/";
+
     const MarkdownComponents = {
         h2: heading => {
             const { node } = heading
@@ -83,8 +83,8 @@ const Index = ({ data }) => {
 							<div className="blog-image position-relative">
 								<ImgLoader
 									src={bannerImage}
-									width={banner?.data?.data[0]?.attributes?.width ? banner.data[0].attributes.width : '540'}
-									height={banner?.data?.data[0]?.attributes?.height ? banner.data[0].attributes.height : '380'}
+									width={banner.data[0].attributes.width}
+									height={banner.data[0].attributes.height}
 								/>
 								<div className="arrow">
 									<ImgLoader

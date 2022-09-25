@@ -15,6 +15,7 @@ import { fetchAPI } from "../lib/api";
 
     export default function FinancialModelling({data}) {
     const { MetaData, ClientName, faqs, case_studies } = data.attributes
+    console.log('data.attributes',ClientName.data)
     return (
         <Layout>
               <Seo seo={MetaData[0]}/>
@@ -29,7 +30,7 @@ import { fetchAPI } from "../lib/api";
                 <Alumnussection />
                 <TestimonialsectionPitch data={ClientName.data} />
                 <Worksection />
-                <FAQsection data={faqs.data} title="Things you need to know before taking our financial modelling service" />
+                <FAQsection data={faqs.data} />
                 </div>
             </div>
           

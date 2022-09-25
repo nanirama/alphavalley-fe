@@ -6,12 +6,16 @@ import NextArw from "../../assets/images/svg/next-arw.svg"
 
 const Pagination = ({ pageIndex, setPageIndex, recordsPerPage, totalRecords }) => {
     const pageCount = Math.ceil(totalRecords / recordsPerPage).toFixed();
+
+    console.log('totalRecords', totalRecords)
+
     let pages = [];
     for (let i = 0; i < pageCount; i++) {
         pages.push({
             label: i + 1
         });
     }
+    console.log('pageSize', pageCount)
     return (
         <nav aria-label="Page navigation example">
             <ul className="pagination">

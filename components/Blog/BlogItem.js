@@ -19,6 +19,7 @@ export default function BlogItem({ data, categoryName='' }) {
     const categories =   postData?.data?.attributes?.categories && postData.data.attributes.categories  
     const coverImage = covers && covers.data && covers.data.attributes ? covers.data.attributes.url : DefaultImg
     const catName = categoryName ? categoryName : categories?.data[0]?.attributes?.name
+    console.log('blog Single id', categories?.data[0]?.attributes?.name)
     return (
         <div className="col-lg-6 col-md-12 col-sm-12 col-12">
             <Link href={`/blog/${slug}`}>
