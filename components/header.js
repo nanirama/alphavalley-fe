@@ -41,7 +41,7 @@ export default function Header() {
             <div className="container">
                <div className="navigation position-relative">
                   <div className="logo">
-                     <Link href="/"><a><ImgLoader src={Logo} width={146} height={38} alt="Logo" /></a></Link>
+                     <Link href="/"><a><ImgLoader src={Logo} width={200} height={68} alt="Logo" /></a></Link>
                   </div>
 
                   <div className={`nav-menu ${toggle ? "open" : ""}`}>

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import ImgLoader from './Image'
 import Logo from "../assets/images/logoicon.png"
-import FooterLogo from "../assets/images/svg/footer-logo.svg"
+import FooterLogo from "../assets/images/footer-logo.png"
 
 
 import Icon4 from "../assets/images/svg/twitter-svg.svg"
@@ -18,14 +18,14 @@ export default function Footer() {
                     <div className="row">
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                             <div className="description">
-                                {/* <div className="logo border-2">
+                                <div className="logo">
                                     <Link href="/">
                                         <a>
-                                            <ImgLoader src={FooterLogo} width={175} height={100} alt="Logo" />
+                                            <ImgLoader src={FooterLogo} width={200} height={68} alt="Logo" />
                                         </a>
                                     </Link>
-                                </div> */}
-                                <div className="logo">
+                                </div>
+                                {/* <div className="logo">
 
                                     <Link href="/">
                                         <a>
@@ -34,7 +34,7 @@ export default function Footer() {
                                     </Link>
 
                                     <Link href="/"><a><h5 className='mb-0'>AlphaValley</h5></a></Link>
-                                </div>
+                                </div> */}
                                 <p>AlphaValley Advisors is a leading pitch deck consultant. We make early-stage startups ready for VC funding. We also offer investment research, equity research, and financial modelling services to boutique and institutional investment managers and PE/VC firms.</p>
                             </div>
                         </div>

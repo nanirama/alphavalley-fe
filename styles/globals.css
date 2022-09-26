@@ -5280,7 +5280,7 @@ color:#000 !important;
 }
 
 .footer .footer-top .description .logo {
-    margin-bottom: 25px;
+    margin-bottom: 2px;
     align-items:center;
     display:flex;
 }
@@ -7697,6 +7697,4 @@ margin:15px 0;
 }
 .form-group label {
 padding-bottom: 5px;
-}
-.form-group input {
 }
