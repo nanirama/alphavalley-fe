@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 export default function CaseStudiessection({ data }) {
     
     var settings = {
+        lazyLoad: 'ondemand',
         dots: false,
         arrows: true,
         infinite: true,

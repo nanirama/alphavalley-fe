@@ -23,6 +23,7 @@ import DefaultImg from '../../assets/images/author-default.png'
 
 export default function Testimonialsection({ data }) {
     var settings = {
+        lazyLoad: 'ondemand',
         infinite: true,
         arrow: true,
         dots: true,
@@ -39,7 +40,7 @@ export default function Testimonialsection({ data }) {
                     <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 hometestmnl">
                         <Slider {...settings}>
                             {data && data.map((item, index) => {
-                                const { Content, ClientName, Designation, publishedAt } = item.attributes
+                                const { Content, ClientName, Designation } = item.attributes
                                 return (
                                     <div key={index}>
                                         <h3>{Content && Content}</h3>
