@@ -34,8 +34,8 @@ export default function Home({ data }) {
         <HeroSection />
         <StatSection />
         <Servicesection />
-        {/* <Testimonialsection data={ClientName.data} />
-        <div className='home-usa'>
+        <Testimonialsection data={ClientName.data} />
+        {/* <div className='home-usa'>
         <CaseStudiessection data={case_studies.data} />
         </div>        
         <OtherSevicesection />
