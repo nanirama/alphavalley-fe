@@ -32,14 +32,14 @@ export default function Home({ data }) {
       <Seo seo={MetaData[0]} />
       <div className='home'>
         <HeroSection />
-        <StatSection />
+        {/* <StatSection />
         <Servicesection />
         <Testimonialsection data={ClientName.data} />
         <div className='home-usa'>
         <CaseStudiessection data={case_studies.data} />
         </div>        
         <OtherSevicesection />
-        <CTAsection1 />
+        <CTAsection1 /> */}
       </div>
     </Layout>
   )
