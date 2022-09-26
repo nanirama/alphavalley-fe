@@ -24,7 +24,7 @@ export default function CaseStudyItem({ id }) {
         return (
             <div className="casestudyitem card">
                 {bannerImage && <Link href={`/casestudy/${slug}`}><a><ImgLoader src={bannerImage} alt={title && title} width={400} height={240} /></a></Link>}
-                <span>{Clientname && Clientname} •&nbsp;&nbsp; <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></span>
+                <span>{Clientname && Clientname} • <time dateTime={moment(publishedAt).format('DD MMM YYYY')}>&nbsp;&nbsp;{moment(publishedAt).format('DD MMM YYYY')} </time></span>
                 <div className="heading">
                     {title && <Link href={`/casestudy/${slug}`}><a><h3>{cutString(title, 20)}</h3></a></Link>}
                     <div className="casestdyarw">
