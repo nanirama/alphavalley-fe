@@ -3,11 +3,11 @@ import Slider from "react-slick"
 import ImgLoader from '../Image'
 
 
-import TestImg1 from "../../assets/images/svg/logo-1.svg"
-import TestImg2 from "../../assets/images/svg/logo-2.svg"
-import TestImg3 from "../../assets/images/svg/logo-3.svg"
-import TestImg4 from "../../assets/images/svg/logo-4.svg"
-import TestImg5 from "../../assets/images/svg/logo-5.svg"
+// import TestImg1 from "../../assets/images/svg/logo-1.svg"
+// import TestImg2 from "../../assets/images/svg/logo-2.svg"
+// import TestImg3 from "../../assets/images/svg/logo-3.svg"
+// import TestImg4 from "../../assets/images/svg/logo-4.svg"
+// import TestImg5 from "../../assets/images/svg/logo-5.svg"
 
 
 
