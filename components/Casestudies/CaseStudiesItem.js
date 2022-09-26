@@ -10,6 +10,14 @@ import CasestudyImg1 from "../../assets/images/case-study1.png"
 export default function CaseStudiesItem({ data }) {
     const POST_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/case-studies/${data.id}?populate=*`
     const { data: postData, error } = useSWR(POST_ENDPOINT, fetcher);
+
+    
+    const cutString = (s, n) => {
+        var cut = s.indexOf(' ', n);
+        if (cut == -1) return s;
+        return s.substring(0, cut)
+    }
+
     if (postData) {
         const { title, slug, excrept, publishedAt, Clientname, tags, banner } = postData.data.attributes
         const bannerImage = banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.url ? banner.data[0].attributes.url : CasestudyImg1
@@ -22,10 +30,8 @@ export default function CaseStudiesItem({ data }) {
                     </div>
                     <div className="content col-sm-6">
                         <span>{Clientname && Clientname} • <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></span>
-                        <h4 className='ttl-minhght'><Link href={`/casestudy/${slug}`}>
-                            <a>{title && title}</a></Link></h4>
-                        {/* {excrept && <p className="min-height" ><ReactMarkdown>{excrept}</ReactMarkdown></p>}     */}
-                        <div className="min-height">{excrept && parse(`<p> ${excrept} </p>`)}</div>
+                        {title && <Link href={`/casestudy/${slug}`}><a><h4>{cutString(title, 20)}</h4></a></Link>}
+                        <div>{excrept && parse(cutString(excrept, 65))}</div>
                         {tags && tags.data && tags.data.length > 0 && (
                             <div className="tags d-flex flex-row justify-content-start align-items-center flex-wrap mt-4">
                                 {tags.data.slice(0, 2).map((item, index) => (

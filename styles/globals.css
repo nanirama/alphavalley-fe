@@ -4338,7 +4338,6 @@ border:2px solid green;
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
-    height: 25px;
     overflow: hidden;
 }
 
@@ -4357,9 +4356,9 @@ border:2px solid green;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     overflow: hidden;
-    height: 45px;
+    height: 40px;
 }
 .tags span,.tags a {
     border-radius: 16px;
@@ -5998,8 +5997,7 @@ height: 60px;
     width: 100% !important;
   display: flex !important;
   flex-direction: row !important;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .pitch-deck .header-section .header-box .content-box {
   width: 50%;
@@ -6542,8 +6540,7 @@ height: 60px;
 }
 .pitch-deck .header-section .header-box {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .pitch-deck .header-section .header-box .content-box {
   width: 50%;
@@ -6919,7 +6916,6 @@ height: 60px;
 .pitch-deck-review .header-left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100%;
 }
 .pitch-deck-review .introduction {

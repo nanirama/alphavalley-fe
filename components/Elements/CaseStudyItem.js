@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import Link from 'next/link'
 import moment from 'moment';
+import parse from "html-react-parser";
 import { fetcher } from '../../lib/api'
 
 
@@ -23,7 +24,7 @@ export default function CaseStudyItem({ id }) {
         return (
             <div className="casestudyitem card">
                 {bannerImage && <Link href={`/casestudy/${slug}`}><a><ImgLoader src={bannerImage} alt={title && title} width={400} height={240} /></a></Link>}
-                <span>{Clientname && Clientname} • <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></span>
+                <span>{Clientname && Clientname} •&nbsp;&nbsp; <time dateTime={moment(publishedAt).format('DD MMM YYYY')}> {moment(publishedAt).format('DD MMM YYYY')} </time></span>
                 <div className="heading">
                     {title && <Link href={`/casestudy/${slug}`}><a><h3>{cutString(title, 20)}</h3></a></Link>}
                     <div className="casestdyarw">
@@ -32,7 +33,8 @@ export default function CaseStudyItem({ id }) {
                         </svg></a></Link>
                     </div>
                 </div>
-                {excrept && <p dangerouslySetInnerHTML={{ __html: excrept }} className='min-height' ></p>}
+                <div>{excrept && parse(cutString(excrept, 120))}</div>
+                {/* {excrept && <p dangerouslySetInnerHTML={{ __html: excrept }} className='min-height' ></p>} */}
                 {tags && tags.data && tags.data.length > 0 && (
                     <div className="tags d-flex flex-row justify-content-start align-items-center flex-wrap">
                         {tags.data.slice(0, 2).map((item, index) => (

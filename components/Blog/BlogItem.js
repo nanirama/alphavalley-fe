@@ -19,6 +19,12 @@ export default function BlogItem({ data, categoryName='' }) {
     const categories =   postData?.data?.attributes?.categories && postData.data.attributes.categories  
     const coverImage = covers && covers.data && covers.data.attributes ? covers.data.attributes.url : DefaultImg
     const catName = categoryName ? categoryName : categories?.data[0]?.attributes?.name
+
+    const cutString = (s, n) => {
+        var cut = s.indexOf(' ', n);
+        if (cut == -1) return s;
+        return s.substring(0, cut)
+    }
     return (
         <div className="col-lg-6 col-md-12 col-sm-12 col-12">
             <Link href={`/blog/${slug}`}>
@@ -29,8 +35,8 @@ export default function BlogItem({ data, categoryName='' }) {
                         </div>
                         <div className="content w-100">
                             <span>{catName && catName}</span>
-                            <h4 className='ttl-minhght'>{title && title}</h4>
-                            <p className="min-height">{excerpt && excerpt}....</p>
+                            <h4>{title && cutString(title, 25)}</h4>
+                            <p>{excerpt && cutString(excerpt, 100)}....</p>
                             {author && author.data && author.data.id && <Author author={author} publishedAt={publishedAt} />}
                         </div>
                     </div>
