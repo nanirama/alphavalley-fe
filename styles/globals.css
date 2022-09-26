@@ -6479,13 +6479,13 @@ height: 60px;
     padding: 10px;
 }
 
-.pitch-deck .work-section { 
+.work-section { 
     padding: 64px 0 96px;
   }
-  .pitch-deck .work-section .heading {
+  .work-section .heading {
     margin-bottom: 45px;
   }
-  .pitch-deck .work-section .heading h3 {
+  .work-section .heading h3 {
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;
@@ -6493,29 +6493,29 @@ height: 60px;
     color: #101828;
     margin-bottom: 15px;
   }
-  .pitch-deck .work-section .heading p {
+  .work-section .heading p {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     color: #667085;
   }
-  .pitch-deck .work-section .box {
+  .work-section .box {
     padding: 24px;
     background: #f9fafb;
     height: 275px;
   }
-  .pitch-deck .work-section .box .icon {
+  .work-section .box .icon {
     width: 48px;
     height: 48px;
     background: #5d64e5;
     border-radius: 10px;
     padding: 12px;
   }
-  .pitch-deck .work-section .box .content {
+  .work-section .box .content {
     height: 108px;
   }
-  .pitch-deck .work-section .box h6 {
+  .work-section .box h6 {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -6523,7 +6523,7 @@ height: 60px;
     color: #101828;
     margin-bottom: 8px;
   }
-  .pitch-deck .work-section .box p {
+  .work-section .box p {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

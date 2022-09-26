@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import parse from "html-react-parser";
 import ImgLoader from '../Image'
 import CTABtn from './CTABtn';
 
@@ -24,7 +25,7 @@ export default function FAQsection({ data, title="Commonly asked questions about
                                     <Accordion.Item eventKey={index} key={index}>
                                         <Accordion.Header>{title && title}</Accordion.Header>
                                         <Accordion.Body>
-                                            <p>{description && description}</p>
+                                            <p>{description && parse(description)}</p>
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 )
