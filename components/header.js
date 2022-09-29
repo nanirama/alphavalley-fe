@@ -7,7 +7,7 @@ import ImgLoader from './Image'
 import CTABtn from './Elements/CTABtn'
 
 import Logo from "../assets/images/logo.png"
-import Arrow from "../assets/images/arrow.png"
+import Arrow from "../assets/images/svg/svg_arrow.svg"
 
 import MenuIcon1 from "../assets/images/svg/investorpitchdeck.svg"
 import MenuIcon2 from "../assets/images/svg/financialmodelling.svg"
@@ -57,7 +57,7 @@ export default function Header() {
                                  }
                               }}>
                               <a>Service</a>
-                              <ImgLoader src={Arrow} width={20} height={20} alt="arrow" />
+                              <ImgLoader src={Arrow} width={40} height={40} alt="arrow" />
                            </div>
                            <div className="sub-menu">
                               <div className="container">
@@ -133,7 +133,7 @@ export default function Header() {
                                  }
                               }}>
                               <a>Resources</a>
-                              <ImgLoader src={Arrow} width={20} height={20} alt="arrow" />
+                              <ImgLoader src={Arrow} width={40} height={40} alt="arrow" />
                            </div>
                            <div className="sub-menu">
                               <div className="container">
@@ -218,7 +218,7 @@ export default function Header() {
                                  }
                               }}>
                               <a>Verticals</a>
-                              <ImgLoader src={Arrow} width={20} height={20} alt="arrow" />
+                              <ImgLoader src={Arrow} width={40} height={40} alt="arrow" />
                            </div>
                            <div className="sub-menu">
                               <div className="container">
@@ -238,7 +238,7 @@ export default function Header() {
                                  }
                               }}>
                               <a>Portfolio</a>
-                              <ImgLoader src={Arrow} width={20} height={20} alt="arrow" />
+                              <ImgLoader src={Arrow} width={40} height={40} alt="arrow" />
                            </div>
                            <div className="sub-menu">
                               <div className="container">
