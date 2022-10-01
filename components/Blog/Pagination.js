@@ -5,7 +5,10 @@ import PrevArw from "../../assets/images/svg/prev-arw.svg"
 import NextArw from "../../assets/images/svg/next-arw.svg"
 
 const Pagination = ({ pageIndex, setPageIndex, recordsPerPage, totalRecords }) => {
+    console.log('totalRecords',totalRecords)
     const pageCount = Math.ceil(totalRecords / recordsPerPage).toFixed();
+    console.log('pageCount',pageCount)
+    console.log('pageIndex',pageIndex)
     let pages = [];
     for (let i = 0; i < pageCount; i++) {
         pages.push({
@@ -42,7 +45,7 @@ const Pagination = ({ pageIndex, setPageIndex, recordsPerPage, totalRecords }) =
                 <li className="page-item ">
                     <button className="page-link d-flex align-items-center justify-content-center"
                     onClick={() => setPageIndex(pageIndex + 1)}
-                    disabled={pageIndex === pageCount}
+                    disabled={pageIndex >= pageCount}
                 ><span>Next</span>
                     <ImgLoader src={NextArw} width={12} height={12} alt="Prev" />
                 </button></li>

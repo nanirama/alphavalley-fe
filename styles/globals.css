@@ -3880,7 +3880,16 @@ border:2px solid green;
     -o-border-radius: 20px;
     padding: 40px
 }
+@media (min-width:0) and (max-width:360px) {
+    .formph input {width:100%;}
+}
 
+@media (min-width:0) and (max-width:767.98px) {
+    .home-usa .header-section .outer-box,
+    .home-usa .header-section .outer-box .inner-box {
+        padding: 10px !important;
+    }
+}
 .home-usa .header-section .outer-box .inner-box {
     background-color: #fff;
     text-align: center
@@ -3909,6 +3918,7 @@ border:2px solid green;
 }
 
 .home-usa .header-section .inner-box .form-group input {
+    width:100%;
     background: #fff;
     border: 1px solid #d0d5dd;
     border-radius: 6px;
@@ -4870,7 +4880,8 @@ color:#000 !important;
     }
 
     .home-usa .header-section .outer-box {
-        margin-top: 45px
+        margin-top: 45px;
+        background: none !important;
     }
 
     .home-usa .header-section .form-box {
@@ -7015,7 +7026,7 @@ height: 60px;
     margin-bottom: 14px;
   }
   .pitch-deck .our-section .content-box p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     margin-bottom: 20px;
   }
@@ -7023,7 +7034,7 @@ height: 60px;
     padding: 6px 8px;
   }
   .pitch-deck .our-section .key-points .key-point span {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 20px;
   }
   .pitch-deck .our-section .heading h1 {
@@ -7105,7 +7116,7 @@ height: 60px;
     line-height: 28px;
   }
   .pitch-deck .our-section .content-box h4 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 14px;
   }
   .pitch-deck .our-section .content-box p {
@@ -7665,7 +7676,7 @@ transform: translateY(-50%); display: none; padding: 6px 8px !important;border: 
 }
 @media (max-width:767.98px) {
     .home .other-service-section {
-        padding:40px 0 0 0 !important;
+        padding:20px 0 0 0 !important;
     }
 }
 @media (max-width:767.98px) {
@@ -7698,3 +7709,4 @@ margin:15px 0;
 .form-group label {
 padding-bottom: 5px;
 }
+.no-content{border:2px solid red; padding:0px !important; margin:0px !important; height: 0px!important; width:0px !important; display: none !important; visibility: hidden !important;}

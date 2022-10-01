@@ -1,185 +1,285 @@
 import useSWR from "swr";
-import Link from 'next/link'
-import ReactMarkdown from "react-markdown"
-import ImgLoader from '../Image'
-import Author from './Author'
+import Link from "next/link";
+// import ReactMarkdown from "react-markdown"
+import parse, {
+	attributesToProps,
+	domToReact,
+	HTMLReactParserOptions,
+	Element,
+  } from 'html-react-parser';
+import ImgLoader from "../Image";
+import Author from "./Author";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { fetcher } from '../../lib/api'
+import { fetcher } from "../../lib/api";
 import Share from "./Share";
-import Blog1bg from "../../assets/images/blog1-bg.png"
-import Avatar from "../../assets/images/test-avatar.png"
+import Blog1bg from "../../assets/images/blog1-bg.png";
+import Avatar from "../../assets/images/test-avatar.png";
 
-import Blog2img from "../../assets/images/blog2.png"
-import Blog3img from "../../assets/images/blog3.png"
+import Blog2img from "../../assets/images/blog2.png";
+import Blog3img from "../../assets/images/blog3.png";
 
-import DefaultImg from '../../assets/images/default-img.png'
-const Index = ({data})=>{
-    const {
-        title,
-        slug,
-        excerpt,
-        content,
-        cover_image,
-        publishedAt,
-        tags } = data.attributes
+import DefaultImg from "../../assets/images/default-img.png";
+const Index = ({ data }) => {
+	const { title, slug, excerpt, content, cover_image, publishedAt, tags } =
+		data.attributes;
 
-    const stwitterHandle = "_MsLinda";
-    const stitle = `Read ${title} `;
-    const surl = "/";
+	const stwitterHandle = "_MsLinda";
+	const stitle = `Read ${title} `;
+	const surl = "/";
 
-    const POST_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/blogs/${data.id}?populate=*`
-    const { data: postData, error } = useSWR(POST_ENDPOINT, fetcher);
+	const POST_ENDPOINT = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/blogs/${data.id}?populate=*`;
+	const { data: postData, error } = useSWR(POST_ENDPOINT, fetcher);
 
-    const covers = postData?.data?.attributes?.covers && postData.data.attributes.covers 
-    const author = postData?.data?.attributes?.author && postData.data.attributes.author  
-    const categories =   postData?.data?.attributes?.categories && postData.data.attributes.categories  
-    const coverImage = covers && covers.data && covers.data.attributes ? covers.data.attributes.url : DefaultImg
-    const MarkdownComponentsHeadings = {
-		h2: (heading) => {
-			const { node } = heading;
-			if (node.children[0].type === "text") {
-				return (
-					<li className="text-base font-medium text-gray-500 mb-2">
-						<AnchorLink
-							href={`#${node.children[0].value
-                                .replace("#", "")
-								.replace(" ", "_")                                
-                                .replace(":", "")
-                                .toLowerCase()
-                                }`
-                            }
-						>
-							{node.children[0].value}
-						</AnchorLink>
-					</li>
-				);
-			}
-		},
-		p: (paragraph) => {
-			return null;
-		},
-		h1: (paragraph) => {
-			return null;
-		},
-		h3: (paragraph) => {
-			return null;
-		},
-		h4: (paragraph) => {
-			return null;
-		},
-		h5: (paragraph) => {
-			return null;
-		},
-		h6: (paragraph) => {
-			return null;
-		},
-		ul: (paragraph) => {
-			return null;
-		},
-        ol: (paragraph) => {
-			return null;
-		},
+	const covers =
+		postData?.data?.attributes?.covers && postData.data.attributes.covers;
+	const author =
+		postData?.data?.attributes?.author && postData.data.attributes.author;
+	const categories =
+		postData?.data?.attributes?.categories &&
+		postData.data.attributes.categories;
+	const coverImage =
+		covers && covers.data && covers.data.attributes
+			? covers.data.attributes.url
+			: DefaultImg;
+	const ReplaceParser = (payload) => {
+		const options = {
+			replace: (domNode) => {		
+		
+			if (domNode instanceof Element && domNode.name === 'h1') {
+				const props = attributesToProps(domNode.attribs);			  
+					return (
+						<li className="text-base font-medium text-gray-500 mb-2">
+							<AnchorLink
+								href={`#${domNode.children[0].data
+									.replace("#", "")
+									.replace(" ", "_")
+									.replace(":", "")
+									.toLowerCase()}`}
+							>
+								{domNode.children[0].data}
+							</AnchorLink>
+						</li>
+					);
+				}
+				else
+				{
+					return (
+						<p className="no-content">&nbsp;</p>
+					)
+				}
+				},
+			};
+		
+		return <>{parse(` ${content}`, options)}</>;
 	};
-    const MarkdownComponents = {
-        h2: heading => {
-            const { node } = heading
-            if (node.children[0].type === "text") {
-                return (
-                    <h2 id={`${node.children[0].value
-                    .replace("#", "")
-                    .replace(" ", "_")                                
-                    .replace(":", "")
-                    .toLowerCase()}`}>
-                        {node.children[0].value}
-                    </h2>
-                )
-            }
-        },
-        p: paragraph => {
-            const { node } = paragraph
-            if (node.children[0].type === "raw" && node.children[0].value==='<u>') {
-                return(
-                    <div className="w-full py-3">
-                    <span className="underlinetext">{paragraph.children[1]}</span>{paragraph.children[3]}
-                    </div>
-                )
-            }
-            if (node.children[0].tagName === "img") {
-                const image = node.children[0]
-                const metastring = image.properties.alt
-                const alt = metastring?.replace(/ *\{[^)]*\} */g, "")
-                const metaWidth = metastring.match(/{([^}]+)x/)
-                const metaHeight = metastring.match(/x([^}]+)}/)
-                const width = metaWidth ? metaWidth[1] : "468"
-                const height = metaHeight ? metaHeight[1] : "232"
-             return (
-                    <div className="postImgWrapper my-3 py-2 d-flex flex-row justify-content-center align-items-center">
-                        <ImgLoader
-                            src={image.properties.src}
-                            alt={alt}
-                            width={width}
-                            height={height}
-                        />
-                        
-                    </div>
-                )
-            }
-            return <p>{paragraph.children}</p>
-        },
-    }
-    return(
-        <div className="blog-post">
-                <div className="container">
-                    <div className="heading">
-                        <div className="row">
-                            <div className="col-xl-7 col-lg-12 col-md-12">
-                                <div className="content m-0">
-                                    <div className="tags">
-                                        {categories && categories.data.map((item, index)=>(
-                                            <Link key={index} href={`/blog/category/${item.attributes.slug}`}><a><span className="tag">{item?.attributes?.name}</span></a></Link>
-                                        ))}
-                                    </div>
-                                    <h1>{title && title}</h1>
-                                    <p>{excerpt && excerpt}</p>
-                                    {author && author.data && author.data.id && <Author author={author} publishedAt={publishedAt} />}
-                                </div>
-                            </div>                           
-                        </div>
-                        <div className="image d-flex justify-content-center align-items-center bottom-0 top-0">
-                            <div className='blog-image position-relative'>
-                            <ImgLoader src={coverImage} width={covers?.data?.attributes?.formats?.large?.width ? covers.data.attributes.formats.large.width : '600px'} height={covers?.data?.attributes?.formats?.large?.height ? covers.data.attributes.formats.large.height : '400px'} alt="blog" className="w-100" />
-                               <div className='arrow'>
-                                <ImgLoader src={Blog1bg} width={299} height={148} alt="blog" className="arrow" />
-                            </div>
-                            </div>
-                           
-                        </div>
-                    </div>
+	const ReplaceParserContent = (payload) => {
+		const options = {
+			replace: (domNode) => {		
+		
+			if (domNode instanceof Element && domNode.name === 'h1') {
+				const props = attributesToProps(domNode.attribs);			  
+				return (
+					<h2
+						id={`${domNode.children[0].data
+							.replace("#", "")
+							.replace(" ", "_")
+							.replace(":", "")
+							.toLowerCase()}`}
+					>
+						{domNode.children[0].data}
+					</h2>
+				);
+				}				
+				},
+			};
+		
+		return <>{parse(` ${content}`, options)}</>;
+	};
+	// const MarkdownComponentsHeadings = {
+	// 	h2: (heading) => {
+	// 		const { node } = heading;
+	// 		if (node.children[0].type === "text") {
+	// 			return (
+	// 				<li className="text-base font-medium text-gray-500 mb-2">
+	// 					<AnchorLink
+	// 						href={`#${node.children[0].value
+	// 							.replace("#", "")
+	// 							.replace(" ", "_")
+	// 							.replace(":", "")
+	// 							.toLowerCase()}`}
+	// 					>
+	// 						{node.children[0].value}
+	// 					</AnchorLink>
+	// 				</li>
+	// 			);
+	// 		}
+	// 	},
+	// 	p: (paragraph) => {
+	// 		return null;
+	// 	},
+	// 	h1: (paragraph) => {
+	// 		return null;
+	// 	},
+	// 	h3: (paragraph) => {
+	// 		return null;
+	// 	},
+	// 	h4: (paragraph) => {
+	// 		return null;
+	// 	},
+	// 	h5: (paragraph) => {
+	// 		return null;
+	// 	},
+	// 	h6: (paragraph) => {
+	// 		return null;
+	// 	},
+	// 	ul: (paragraph) => {
+	// 		return null;
+	// 	},
+	// 	ol: (paragraph) => {
+	// 		return null;
+	// 	},
+	// };
+	// const MarkdownComponents = {
+	// 	h2: (heading) => {
+	// 		const { node } = heading;
+	// 		if (node.children[0].type === "text") {
+	// 			return (
+	// 				<h2
+	// 					id={`${node.children[0].value
+	// 						.replace("#", "")
+	// 						.replace(" ", "_")
+	// 						.replace(":", "")
+	// 						.toLowerCase()}`}
+	// 				>
+	// 					{node.children[0].value}
+	// 				</h2>
+	// 			);
+	// 		}
+	// 	},
+	// 	p: (paragraph) => {
+	// 		const { node } = paragraph;
+	// 		if (node.children[0].type === "raw" && node.children[0].value === "<u>") {
+	// 			return (
+	// 				<div className="w-full py-3">
+	// 					<span className="underlinetext">{paragraph.children[1]}</span>
+	// 					{paragraph.children[3]}
+	// 				</div>
+	// 			);
+	// 		}
+	// 		if (node.children[0].tagName === "img") {
+	// 			const image = node.children[0];
+	// 			const metastring = image.properties.alt;
+	// 			const alt = metastring?.replace(/ *\{[^)]*\} */g, "");
+	// 			const metaWidth = metastring.match(/{([^}]+)x/);
+	// 			const metaHeight = metastring.match(/x([^}]+)}/);
+	// 			const width = metaWidth ? metaWidth[1] : "468";
+	// 			const height = metaHeight ? metaHeight[1] : "232";
+	// 			return (
+	// 				<div className="postImgWrapper my-3 py-2 d-flex flex-row justify-content-center align-items-center">
+	// 					<ImgLoader
+	// 						src={image.properties.src}
+	// 						alt={alt}
+	// 						width={width}
+	// 						height={height}
+	// 					/>
+	// 				</div>
+	// 			);
+	// 		}
+	// 		return <p>{paragraph.children}</p>;
+	// 	},
+	// };
+	return (
+		<div className="blog-post">
+			<div className="container">
+				<div className="heading">
+					<div className="row">
+						<div className="col-xl-7 col-lg-12 col-md-12">
+							<div className="content m-0">
+								<div className="tags">
+									{categories &&
+										categories.data.map((item, index) => (
+											<Link
+												key={index}
+												href={`/blog/category/${item.attributes.slug}`}
+											>
+												<a>
+													<span className="tag">{item?.attributes?.name}</span>
+												</a>
+											</Link>
+										))}
+								</div>
+								<h1>{title && title}</h1>
+								<p>{excerpt && excerpt}</p>
+								{author && author.data && author.data.id && (
+									<Author author={author} publishedAt={publishedAt} />
+								)}
+							</div>
+						</div>
+					</div>
+					<div className="image d-flex justify-content-center align-items-center bottom-0 top-0">
+						<div className="blog-image position-relative">
+							<ImgLoader
+								src={coverImage}
+								width={
+									covers?.data?.attributes?.formats?.large?.width
+										? covers.data.attributes.formats.large.width
+										: "600px"
+								}
+								height={
+									covers?.data?.attributes?.formats?.large?.height
+										? covers.data.attributes.formats.large.height
+										: "400px"
+								}
+								alt="blog"
+								className="w-100"
+							/>
+							<div className="arrow">
+								<ImgLoader
+									src={Blog1bg}
+									width={299}
+									height={148}
+									alt="blog"
+									className="arrow"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                    <div className="contents">
-                        <div className="row">
-                            <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                <div className="left-box">
-                                    <div className="table-content">
-                                        <span>Table of contents</span>
-                                        <ReactMarkdown components={MarkdownComponentsHeadings}>{content}</ReactMarkdown>
-                                    </div>
-                                    <Share
-                                        socialConfig={{
-                                            twitter: stwitterHandle,
-                                            config: {
-                                            url: surl,
-                                            title: stitle,
-                                            },
-                                        }}
-                                        />
-                                </div>
-                            </div>
+				<div className="contents">
+					<div className="row">
+						<div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+							<div className="left-box">
+								<div className="table-content">
+									<span>Table of contents</span>
+									{ReplaceParser(` ${content}`)}
+									{/* {parse(` ${content}`)} */}
+									{/* 
+									<ReactMarkdown components={MarkdownComponentsHeadings}>
+										{content}
+									</ReactMarkdown> */}
+								</div>
+								<Share
+									socialConfig={{
+										twitter: stwitterHandle,
+										config: {
+											url: surl,
+											title: stitle,
+										},
+									}}
+								/>
+							</div>
+						</div>
 
-                            <div className="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-                                <div className="right-box content-box blog-content">
-                                    <ReactMarkdown components={MarkdownComponents}>{content}</ReactMarkdown>
-                                    {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.</p>
+						<div className="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+							<div className="right-box content-box blog-content">
+								{ReplaceParserContent(` ${content}`)}
+								{/* {parse(` ${content}`)} */}
+
+								{/* <ReactMarkdown components={MarkdownComponents}>
+									{content}
+								</ReactMarkdown> */}
+								{/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.</p>
                                     <br />
                                     <hr />
                                     <br />
@@ -244,25 +344,23 @@ const Index = ({data})=>{
                                     <p>Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.</p>
                                     <p>Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.</p>
                                     <p>Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.</p> */}
-                                    <br />
-                                    <hr />
-                                    <br />
-                                    <div className="tag-box">
-                                        {tags && tags.data && tags.data.map((item, index)=>(
-                                            <span key={index}>{item.attributes.name}</span>
-                                        ))}                                        
-                                    </div>
+								<br />
+								<hr />
+								<br />
+								<div className="tag-box">
+									{tags &&
+										tags.data &&
+										tags.data.map((item, index) => (
+											<span key={index}>{item.attributes.name}</span>
+										))}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-    )
-}
-
-export default Index
+export default Index;

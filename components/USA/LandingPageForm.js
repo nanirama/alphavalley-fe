@@ -379,7 +379,7 @@ const LandingPageForm = ({subject="USA Landing Page Subject"}) => {
                     </div>
                         <div className="row">
                             <div className="col-sm-12">
-                            <div className='d-flex flex-direction-row is-invalid px-2 block w-full shadow-sm text-warm-gray-900 phone-outer'>
+                            <div className='d-flex formph flex-direction-row is-invalid px-2 block w-full shadow-sm text-warm-gray-900 phone-outer'>
                                                 <select {...register("country_code")} className="border-0" name="country_code">
                                                     {countries.map((item,index)=>(
                                                         <option value={item.code} key={index}>{item.code}</option>
