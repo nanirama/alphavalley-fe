@@ -14,57 +14,12 @@ const Index = ({ data }) => {
         publishedAt,
         banner,
         tags } = data.attributes
+	console.log('banner',banner)
     const bannerImage = banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.url ? banner.data[0].attributes.url : CasestudyImg1
     const stwitterHandle = "_MsLinda";
     const stitle = `Read ${title} `;
     const surl = "/";
-    const MarkdownComponents = {
-        h2: heading => {
-            const { node } = heading
-            if (node.children[0].type === "text") {
-                return (
-                    <h2 id={`${node.children[0].value
-                        .replace("#", "")
-                        .replace(" ", "_")
-                        .replace(":", "")
-                        .toLowerCase()}`}>
-                        {node.children[0].value}
-                    </h2>
-                )
-            }
-        },
-        p: paragraph => {
-            const { node } = paragraph
-            if (node.children[0].type === "raw" && node.children[0].value === '<u>') {
-                return (
-                    <div className="w-full py-3">
-                        <span className="underlinetext">{paragraph.children[1]}</span>{paragraph.children[3]}
-                    </div>
-                )
-            }
-            if (node.children[0].tagName === "img") {
-                const image = node.children[0]
-                const metastring = image.properties.alt
-                const alt = metastring?.replace(/ *\{[^)]*\} */g, "")
-                const metaWidth = metastring.match(/{([^}]+)x/)
-                const metaHeight = metastring.match(/x([^}]+)}/)
-                const width = metaWidth ? metaWidth[1] : "468"
-                const height = metaHeight ? metaHeight[1] : "232"
-                return (
-                    <div className="postImgWrapper my-3 py-2 d-flex flex-row justify-content-center align-items-center">
-                        <ImgLoader
-                            src={image.properties.src}
-                            alt={alt}
-                            width={width}
-                            height={height}
-                        />
-
-                    </div>
-                )
-            }
-            return <p>{paragraph.children}</p>
-        },
-    }
+   
     return (
 			<div className="blog-post">
 				<div className="container">
@@ -81,11 +36,14 @@ const Index = ({ data }) => {
 						</div>
 						<div className="image d-flex justify-content-center align-items-center bottom-0 top-0">
 							<div className="blog-image position-relative">
-								<ImgLoader
-									src={bannerImage}
-									width={banner?.data?.data[0]?.attributes?.width ? banner.data[0].attributes.width : '540'}
-									height={banner?.data?.data[0]?.attributes?.height ? banner.data[0].attributes.height : '380'}
-								/>
+								{banner && bannerImage && (
+									<ImgLoader
+										src={bannerImage}
+										width={banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.width ? banner.data[0].attributes.width : '540'}
+										height={banner && banner.data && banner.data[0] && banner.data[0].attributes && banner.data[0].attributes.height ? banner.data[0].attributes.height : '380'}
+									/>
+								)}
+								
 								<div className="arrow">
 									<ImgLoader
 										src={Blog1bg}
@@ -116,10 +74,7 @@ const Index = ({ data }) => {
 
 							<div className="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
 								<div className="right-box content-box blog-content">
-									{/* <ReactMarkdown components={MarkdownComponents}>
-										{casestudy}
-                                </ReactMarkdown> */}
-									{parse(`<p> ${casestudy} </p>`)}
+									{casestudy && parse(`<p> ${casestudy} </p>`)}
 									<br />
 									<hr/>
 									<div className="tag-box">
