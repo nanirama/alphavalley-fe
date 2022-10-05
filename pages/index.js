@@ -10,16 +10,6 @@ const OtherSevicesection = dynamic(() => import('../components/Home/OtherSevices
 const CTAsection1 = dynamic(() => import('../components/Elements/CTASection1'))
 const CaseStudiessection = dynamic(() => import('../components/Elements/CaseStudies'))
 
-
-
-// import Layout from "../components/layout"
-// import HeroSection from "../components/Home/HeroSection"
-// import Servicesection from "../components/Home/Servicesection"
-// import StatSection from "../components/Elements/StatSection"
-// import Testimonialsection from "../components/Elements/Testimonialsection"
-// import OtherSevicesection from "../components/Home/OtherSevicesection"
-// import CTAsection1 from "../components/Elements/CTASection1"
-// import CaseStudiessection from "../components/Elements/CaseStudies"
 import { fetchAPI } from "../lib/api";
 
 

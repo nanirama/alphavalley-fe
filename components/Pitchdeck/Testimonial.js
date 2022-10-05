@@ -1,7 +1,7 @@
 
 import moment from 'moment';
 import useSWR from "swr";
-
+import parse from 'html-react-parser';
 import Slider from "react-slick"
 
 import ImgLoader from '../Image'
@@ -35,7 +35,7 @@ export default function TestimonialsectionPitch({data}) {
                             const { Content, ClientName, publishedAt } = item.attributes
                         return(
                                 <div className="testimonial" key={index}>
-                                    <h3 className="mt-2 mb-5 text-center text-white">{Content && Content}</h3>
+                                    <h3 className="mt-2 mb-5 text-center text-white">{Content && parse(` ${Content}`)}</h3>
                                     <div className="user-info">
                                         <ImgLoader src={DefaultImg} width={64} height={64} alt={ClientName && ClientName} className="rounded-circle" />
                                         <p className="name mt-3">{ClientName && ClientName}</p>                                        

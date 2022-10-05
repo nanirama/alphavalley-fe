@@ -2,7 +2,7 @@ import ImgLoader from '../Image'
 
 
 import Macbook1 from "../../assets/images/other-services.jpg"
-import Macbook2 from "../../assets/images/full-macbook1.png"
+import Otherservices from "../../assets/images/svg/otherservices.svg"
 
 import Downarrow from "../../assets/images/downarrow.png"
 
@@ -77,8 +77,8 @@ export default function OtherSevicesection() {
                         <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 border-2">
                             <div className="image">
                                 <div>
-                                    <div className=''>
-                                        <ImgLoader src={Macbook1} width={575} height={319} alt="dashboard" />
+                                    <div className='border border-primary'>
+                                        <ImgLoader src={Otherservices} width={575} height={319} alt="dashboard" />
                                     </div>
                                 </div>
                                 <div className='hand-arrow '>

@@ -1,5 +1,5 @@
 import Slider from "react-slick"
-
+import parse from 'html-react-parser';
 import ImgLoader from '../Image'
 
 
@@ -43,7 +43,7 @@ export default function Testimonialsection({ data }) {
                                 const { Content, ClientName, Designation } = item.attributes
                                 return (
                                     <div key={index}>
-                                        <h3>{Content && Content}</h3>
+                                        <h3>{Content && parse(` ${Content}`)}</h3>
                                         <div className="user">
                                             <ImgLoader src={DefaultImg} width={64} height={64} alt={ClientName && ClientName} className="rounded-circle" />
                                             <h6>{ClientName && ClientName}</h6>
