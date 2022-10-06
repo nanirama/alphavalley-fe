@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-
-// import { Link, NavLink } from "react-router-dom";
 import Link from 'next/link'
 
 import ImgLoader from './Image'
 import CTABtn from './Elements/CTABtn'
 
-import Logo from "../assets/images/logo.png"
+import LogoSVG from "../assets/images/svg/site-logo.svg"
 import Arrow from "../assets/images/svg/svg_arrow.svg"
 
 import MenuIcon1 from "../assets/images/svg/investorpitchdeck.svg"
@@ -41,7 +39,7 @@ export default function Header() {
             <div className="container">
                <div className="navigation position-relative">
                   <div className="logo">
-                     <Link href="/"><a><ImgLoader src={Logo} width={200} height={68} alt="Logo" /></a></Link>
+                     <Link href="/"><a><ImgLoader src={LogoSVG} width={200} height={68} alt="Logo" /></a></Link>
                   </div>
 
                   <div className={`nav-menu ${toggle ? "open" : ""}`}>

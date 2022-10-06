@@ -3,6 +3,7 @@ import ImgLoader from '../Image'
 
 import Macbook1 from "../../assets/images/other-services.jpg"
 import Otherservices from "../../assets/images/svg/otherservices.svg"
+import OtherservicesNew from "../../assets/images/svg/otherservices-new.svg"
 
 import Downarrow from "../../assets/images/downarrow.png"
 
@@ -76,8 +77,8 @@ export default function OtherSevicesection() {
                         </div>
                         <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div className="image">
-                                <div>
-                                        <ImgLoader src={Otherservices} width={575} height={319} alt="dashboard" />
+                                <div className="">
+                                        <ImgLoader src={OtherservicesNew} width={575} height={319} alt="dashboard" />
                                 </div>
                                 <div className='hand-arrow '>
                                     <ImgLoader src={Downarrow} width={284} height={245} alt="arrow" />

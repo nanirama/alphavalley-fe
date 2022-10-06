@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import ImgLoader from './Image'
 import Logo from "../assets/images/logoicon.png"
-import FooterLogo from "../assets/images/footer-logo.png"
+import FooterLogo from "../assets/images/svg/footer-logo.svg"
+// import FooterLogo from "../assets/images/footer-logo.png"
 
 
 import Icon4 from "../assets/images/svg/twitter-svg.svg"

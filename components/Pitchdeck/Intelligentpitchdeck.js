@@ -1,7 +1,8 @@
 import ImgLoader from '../Image'
 
 import Handarw from "../../assets/images/hand-arw.png"
-import Intelligentimg from "../../assets/images/intelligent-img.jpg"
+// import Intelligentimg from "../../assets/images/intelligent-img.jpg"
+import Intelligentimg from "../../assets/images/svg/otherservices-new.svg"
 
 export default function Pitchdeckservicesection() {
 
