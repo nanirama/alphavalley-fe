@@ -74,12 +74,10 @@ export default function OtherSevicesection() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 border-2">
+                        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div className="image">
                                 <div>
-                                    <div className='border border-primary'>
                                         <ImgLoader src={Otherservices} width={575} height={319} alt="dashboard" />
-                                    </div>
                                 </div>
                                 <div className='hand-arrow '>
                                     <ImgLoader src={Downarrow} width={284} height={245} alt="arrow" />
